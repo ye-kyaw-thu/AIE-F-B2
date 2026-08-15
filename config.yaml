@@ -1,0 +1,31 @@
+annotation_task_name: "POLAR_Myanmar_Assignment2"
+
+item_properties:
+  id_key: "id"
+  text_key: "text"
+
+layout:
+  - "html"
+  - "radio"
+  - "textbox"
+
+annotation_schemes:
+  - annotation_security: "all"
+    name: "polarization_labels"
+    description: "Select all polarization attributes applying to this sentence."
+    type: "checkbox"
+    labels:
+      - "Toxic / Offensive"
+      - "Insult / Derogatory"
+      - "Profanity / Vulgarity"
+      - "Discrimination / Hate"
+      - "Political / Ideological"
+      - "Threat / Violence"
+
+  - annotation_security: "all"
+    name: "keywords"
+    description: "Extract specific trigger keywords separated by '|'. Write NULL if none."
+    type: "textbox"
+    placeholder: "e.g., ရှက် ဖို့ ကောင်း တယ်|ရွံ စရာ"
+
+output_annotation_format: "csv"
