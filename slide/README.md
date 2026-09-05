@@ -16,5 +16,6 @@
 14. Class 14, 23 Aug 2026: [1 Papers Reading (Speech Classification)](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/1paper/MyanmarSpeechClassificationUsingTransferLearningForImageClassification.pdf)  
 15. Class 15, 29 Aug 2026: [ASR Tutorial with Kaldi](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/kaldi.pdf)  
 16. Class 16, 30 Aug 2026: [My Doctoral Thesis Work: Positional Mapping, Positional Gesture and Positional Prediction](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/PM-PG-PP/1-myResearchWorks.pdf)  
-17. Class 16, 30 Aug 2026: [Positional Gesture for Advanced Smart Terminals: Simple Gesture Text Input for Syllabic Scripts Like Myanmar, Khmer and Bangla](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/PM-PG-PP/PG-presentation.pdf)
+17. Class 16, 30 Aug 2026: [Positional Gesture for Advanced Smart Terminals: Simple Gesture Text Input for Syllabic Scripts Like Myanmar, Khmer and Bangla](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/PM-PG-PP/PG-presentation.pdf)  
+18. Class 17, 5 Sept 2026: [SLM-to-LLM: Language Modeling, Practice, and Modern LLM Systems](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/SLM-to-LLM.pdf)  
  
