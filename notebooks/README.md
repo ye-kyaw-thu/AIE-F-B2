@@ -13,3 +13,4 @@
 11. Class-15, 29 Aug 2026: [ASR_Kaldi_YesNo_Tutorial.ipynb](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/ASR_Kaldi_YesNo_Tutorial.ipynb)  
 12. Class-15, 29 Aug 2026: [ASR_Kaldi_FSDD_Tutorial.ipynb](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/ASR_Kaldi_FSDD_Tutorial.ipynb)  
 13. Class-15, 29 Aug 2026: [ASR_Kaldi_an4_Tutorial.ipynb](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/ASR_Kaldi_an4_Tutorial.ipynb)  
+14. Class-19, 12 Sept 2026: [ASR Finetuning for Medical Domain](https://github.com/ye-kyaw-thu/AIE-F-B2/tree/main/notebooks/myMediWhisper_exp)  

@@ -18,4 +18,8 @@
 16. Class 16, 30 Aug 2026: [My Doctoral Thesis Work: Positional Mapping, Positional Gesture and Positional Prediction](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/PM-PG-PP/1-myResearchWorks.pdf)  
 17. Class 16, 30 Aug 2026: [Positional Gesture for Advanced Smart Terminals: Simple Gesture Text Input for Syllabic Scripts Like Myanmar, Khmer and Bangla](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/PM-PG-PP/PG-presentation.pdf)  
 18. Class 17, 5 Sept 2026: [SLM-to-LLM: Language Modeling, Practice, and Modern LLM Systems](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/SLM-to-LLM.pdf)  
+19. Class 18, 6 Sept 2026: [Weighted Finite State Transducers (WFST)](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/WFST_Talk_at_Taxila_Univ_Myanmar.pdf)  
+20. Class 18, 6 Sept 2026: [LU Talk: Topology-Preserving Contrastive Learning for Taxonomy Induction in Thai Lexical Semantics by Peerachet Porkaew](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/LCCL_Peerachet.pdf)  
+21. Class 19, 12 Sept 2026: [ASR Error Correction by Ye Bhone Lin](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/AEC_Slide_v2.pdf)  
+22. Class 19, 12 Sept 2026: [Introduction to the myMediWhisper Project by Ye Bhone Lin](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/slide/myMediWhisper.pdf)  
  
