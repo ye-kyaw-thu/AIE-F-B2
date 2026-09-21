@@ -1,0 +1,18 @@
+We edited followings of original chunking.py code:
+
+# Separator of field values.
+separator = '\t'
+
+# Field names of the input data.
+fields = 'w y'
+
+# Attribute templates.
+templates = (
+    (('w', -2), ),
+    (('w', -1), ),
+    (('w',  0), ),
+    (('w',  1), ),
+    (('w',  2), ),
+    (('w', -1), ('w',  0)),
+    (('w',  0), ('w',  1)),
+   )

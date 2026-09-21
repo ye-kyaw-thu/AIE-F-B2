@@ -1,0 +1,86 @@
+annotation_task_name: "Myanmar POLAR Annotation"
+
+# All relative paths below are resolved against task_dir.
+task_dir: "."
+
+# Data configuration
+data_files:
+  - "data/data.json"
+
+# Tell Potato which fields in each record to use.
+item_properties:
+  id_key: id
+  text_key: text
+
+# Where per-user annotation state is stored (relative to task_dir).
+output_annotation_dir: "annotation_output/mya"
+export_annotation_format: "json"
+
+# Annotation scheme
+annotation_schemes:
+  # Task 1: Polarization Detection
+  - annotation_type: radio
+    name: polarization
+    description: "Task 1: Is the text polarized? (1=Yes, 0=No)"
+    labels: ["0", "1"]
+
+  # Task 2: Polarization Type
+  - annotation_type: radio
+    name: political
+    description: "Task 2: Political / Ideological (1=Yes, 0=No)"
+    labels: ["0", "1"]
+
+  - annotation_type: radio
+    name: racial
+    description: "Task 2: Racial / Ethnic (1=Yes, 0=No)"
+    labels: ["0", "1"]
+
+  - annotation_type: radio
+    name: religious
+    description: "Task 2: Religious (1=Yes, 0=No)"
+    labels: ["0", "1"]
+
+  - annotation_type: radio
+    name: gender
+    description: "Task 2: Gender / Sexual (1=Yes, 0=No)"
+    labels: ["0", "1"]
+
+  - annotation_type: radio
+    name: other
+    description: "Task 2: Other (1=Yes, 0=No)"
+    labels: ["0", "1"]
+
+  # Task 3: Polarization Manifestation
+  - annotation_type: radio
+    name: stereotype
+    description: "Task 3: Stereotype (1=Yes, 0=No)"
+    labels: ["0", "1"]
+
+  - annotation_type: radio
+    name: vilification
+    description: "Task 3: Vilification (1=Yes, 0=No)"
+    labels: ["0", "1"]
+
+  - annotation_type: radio
+    name: dehumanization
+    description: "Task 3: Dehumanization (1=Yes, 0=No)"
+    labels: ["0", "1"]
+
+  - annotation_type: radio
+    name: extreme_language
+    description: "Task 3: Extreme Language / Absolutism (1=Yes, 0=No)"
+    labels: ["0", "1"]
+
+  - annotation_type: radio
+    name: lack_of_empathy
+    description: "Task 3: Lack of Empathy (1=Yes, 0=No)"
+    labels: ["0", "1"]
+
+  - annotation_type: radio
+    name: invalidation
+    description: "Task 3: Invalidation (1=Yes, 0=No)"
+    labels: ["0", "1"]
+
+# Skip password authentication
+require_password: false
+
