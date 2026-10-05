@@ -4,6 +4,7 @@
 - Task-1, Task-2, Task-3 နဲ့ ပတ်သက်ပြီး  ဒီလင့်ကို [https://polar-semeval.github.io/tasks.html](https://polar-semeval.github.io/tasks.html) refer လုပ်ပါ။
 - အတန်းထဲမှာ ရှင်းပြခဲ့သလိုပဲ နည်းနည်း ခေါင်းစားမယ့် အပိုင်းက တစ်ယောက်ချင်းစီ ပြင်ဆင်ထားတဲ့ ဒေတာတွေကို အရင်ဆုံး format ညှိရမယ့် အပိုင်းပါ။ ဘယ်စာကြောင်းက ဘယ်သူက ပြင်ဆင်ထားတယ်ဆိုတဲ့ information လည်း ပါဝင်ပါစေ။ ဆရာ နားလည်တာက ဒေတာပြင်ဆင်တာကို အဆင့် နှစ်ဆင့် အနေနဲ့ ပြင်ဆင်ရလိမ့်မယ်။ ပထမအဆင့်မှာက ဘယ်ကနေ ယူထားတယ်ဆိုတဲ့ resource link, data annotator စတာတွေပါ အားလုံး ပါတဲ့ format အဖြစ်ပြောင်းလဲ ရလိမ့်မယ်။ ပြီးမှ မော်ဒယ်ဆောက်ဖို့အတွက် လိုအပ်တဲ့ အပိုင်းကိုပဲ နောက်ထပ် ဒုတိယ အဆင့်အနေနဲ့ ပြင်ဆင်ရလိမ့်မယ်။ အဲဒီ ဒုတိယ အဆင့် format မှာတော့ annotator name, resource link တွေ မပါလည်း ရပါတယ်။
 - Group project အနေနဲ့ သွားကြရအောင်။
+- Classification Model အပိုင်းကိုတော့ traditional ML method တွေကို baseline ထားလိုက်ပြီး experiment အနေနဲ့က Bi-LSTM, Transformer, Pretrained model finetuning စသည်ဖြင့် လုပ်တတ်သလို လုပ်ကြည့်ကြပါ။ ရလဒ်ကိုတော့ comparison လုပ်ကြည့်ပြီး ကိုယ့်အဖွဲ့အနေနဲ့ ရှာဖွေတွေ့ရှိတာကို report ရေးပါ။ Presentation လုပ်ပါ။  
 
 ## Submission Deadline
 
