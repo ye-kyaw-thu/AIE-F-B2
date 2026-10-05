@@ -19,4 +19,5 @@
 17. Class-23, 26 Sept 2026: [ALT-Corpus-Translation-Tutorial.ipynb](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/NMT-Tutorial/ALT-Corpus-Translation-Tutorial.ipynb)  
 18. Class-26, 4 Oct 2026: [Word Error Rate (WER) Calculation with SCLITE](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/WER_Calculation_Tutorial.ipynb)  
 19. Class-26, 4 Oct 2026: [Hatespeech Classification with Traditional ML Approaches](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/Hatespeech_classification/HatespeechClassification_with_ML.ipynb)  
-20. Class-26, 4 Oct 2026: [Hatespeech Classification with FastText](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/Hatespeech_classification/HatespeechClassification_with_FastText.ipynb)  
+20. Class-26, 4 Oct 2026: [Hatespeech Classification with FastText](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/Hatespeech_classification/HatespeechClassification_with_FastText.ipynb)   
+21. Class-26, 4 Oct 2026: [Text generation, text summarization, machine translation, NER tagging, text similarity measurement and spelling checking with pretrained models](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/demo_with_pretrained_models.ipynb)
