@@ -21,4 +21,4 @@
 19. Class-26, 4 Oct 2026: [Hatespeech Classification with Traditional ML Approaches](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/Hatespeech_classification/HatespeechClassification_with_ML.ipynb)  
 20. Class-26, 4 Oct 2026: [Hatespeech Classification with FastText](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/Hatespeech_classification/HatespeechClassification_with_FastText.ipynb)   
 21. Class-26, 4 Oct 2026: [Text generation, text summarization, machine translation, NER tagging, text similarity measurement and spelling checking with pretrained models](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/Pretrained-models/demo_with_pretrained_models.ipynb)  
-22. Class-26, 4 Oct 2026:[mm_demo.py]()
+22. Class-26, 4 Oct 2026:[mm_demo.py](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/Pretrained-models/mm_demo.py)
