@@ -17,3 +17,4 @@
 15. Class-21, 19 Sept 2026: [SMT-Tutorial](https://github.com/ye-kyaw-thu/AIE-F-B2/tree/main/notebooks/SMT-Tutorial)  
 16. Class-23, 26 Sept 2026: [NMT-Tutorial-with-myContradict.ipynb](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/NMT-Tutorial/NMT-Tutorial-with-myContradict.ipynb)  
 17. Class-23, 26 Sept 2026: [ALT-Corpus-Translation-Tutorial.ipynb](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/NMT-Tutorial/ALT-Corpus-Translation-Tutorial.ipynb)  
+18. Class-26, 4 Oct 2026: [Word Error Rate (WER) Calculation with SCLITE](https://github.com/ye-kyaw-thu/AIE-F-B2/blob/main/notebooks/WER_Calculation_Tutorial.ipynb)  
