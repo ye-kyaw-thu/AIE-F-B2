@@ -1,0 +1,3 @@
+﻿model,macro_f1,true_neg,false_pos,false_neg,true_pos
+tfidf,0.7899,414,108,117,432
+bilstm,0.7578,385,137,122,427

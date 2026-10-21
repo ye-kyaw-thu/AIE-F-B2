@@ -1,0 +1,7 @@
+﻿label,support,predicted,precision,recall,f1,false_pos,false_neg
+stereotype,134,195,0.395,0.575,0.468,118,57
+vilification,309,360,0.6,0.699,0.646,144,93
+dehumanization,98,115,0.443,0.52,0.479,64,47
+extreme_language,182,241,0.477,0.632,0.544,126,67
+lack_of_empathy,114,155,0.406,0.553,0.468,92,51
+invalidation,164,218,0.394,0.524,0.45,132,78

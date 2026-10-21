@@ -1,0 +1,16 @@
+{
+  "id": "theinkyawlwin/bilstm-mypolar-multitask",
+  "title": "bilstm-mypolar-multitask",
+  "code_file": "train_bilstm.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "theinkyawlwin/mypolar-assignment7"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}
+

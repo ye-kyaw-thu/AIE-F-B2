@@ -1,0 +1,25 @@
+{
+  "version": "v2_pos_weight",
+  "overall_composite_macro_f1": 0.5914666666666667,
+  "task1_macro_f1": 0.769186,
+  "task1_accuracy": 0.769613,
+  "task2_macro_f1": 0.555860,
+  "task2_micro_f1": 0.576500,
+  "task3_macro_f1": 0.449333,
+  "task3_micro_f1": 0.466000,
+  "task2_class_f1": {
+    "political": 0.691489,
+    "racial/ethnic": 0.519231,
+    "religious": 0.626984,
+    "gender/sexual": 0.440816,
+    "other": 0.500840
+  },
+  "task3_class_f1": {
+    "stereotype": 0.370787,
+    "vilification": 0.671252,
+    "dehumanization": 0.388535,
+    "extreme_language": 0.508897,
+    "lack_of_empathy": 0.332673,
+    "invalidation": 0.423841
+  }
+}

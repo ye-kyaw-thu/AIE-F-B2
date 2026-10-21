@@ -1,0 +1,2 @@
+﻿task,exact_match,true_labels_per_sentence,predicted_labels_per_sentence,no_true_label,no_predicted_label
+task2,0.568,0.576,0.778,0.503,0.426

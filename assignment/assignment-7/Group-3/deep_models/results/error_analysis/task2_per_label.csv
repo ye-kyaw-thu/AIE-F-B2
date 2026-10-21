@@ -1,0 +1,6 @@
+﻿label,support,predicted,precision,recall,f1,false_pos,false_neg
+political,265,318,0.635,0.762,0.693,116,63
+racial/ethnic,91,115,0.522,0.659,0.583,55,31
+religious,39,46,0.457,0.538,0.494,25,18
+gender/sexual,65,91,0.516,0.723,0.603,44,18
+other,157,263,0.388,0.65,0.486,161,55

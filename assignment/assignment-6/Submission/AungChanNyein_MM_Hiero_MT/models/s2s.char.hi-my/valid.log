@@ -1,0 +1,65 @@
+[2026-10-10 14:11:35] [valid] First sentence's tokens as scored:
+[2026-10-10 14:11:35] [valid] DefaultVocab keeps original segments for scoring
+[2026-10-10 14:11:35] [valid]   Hyp: သူ က ကျွန် မ ကို ကျွန် မ ကို ယူ လာ ခဲ့ တယ် ။
+[2026-10-10 14:11:35] [valid]   Ref: သူ က ကျွန် မ ကို ပြောင်း ရွေ့ ဖို့ ကူ ညီ ပေး ခဲ့ တယ် ။
+[2026-10-10 14:11:36] [valid] References contain unknown word, metric scores may be inaccurate
+[2026-10-10 14:11:57] [valid] Ep. 4 : Up. 400 : bleu : 10.4035 : new best
+[2026-10-10 14:12:03] [valid] Ep. 4 : Up. 400 : ce-mean-words : 2.17428 : new best
+[2026-10-10 14:12:09] [valid] Ep. 4 : Up. 400 : perplexity : 8.79587 : new best
+[2026-10-10 14:17:56] [valid] Ep. 7 : Up. 800 : bleu : 20.0251 : new best
+[2026-10-10 14:18:02] [valid] Ep. 7 : Up. 800 : ce-mean-words : 1.77262 : new best
+[2026-10-10 14:18:08] [valid] Ep. 7 : Up. 800 : perplexity : 5.88625 : new best
+[2026-10-10 14:24:00] [valid] Ep. 10 : Up. 1200 : bleu : 27.0005 : new best
+[2026-10-10 14:24:06] [valid] Ep. 10 : Up. 1200 : ce-mean-words : 1.5446 : new best
+[2026-10-10 14:24:12] [valid] Ep. 10 : Up. 1200 : perplexity : 4.68612 : new best
+[2026-10-10 14:29:59] [valid] Ep. 13 : Up. 1600 : bleu : 32.491 : new best
+[2026-10-10 14:30:05] [valid] Ep. 13 : Up. 1600 : ce-mean-words : 1.42453 : new best
+[2026-10-10 14:30:11] [valid] Ep. 13 : Up. 1600 : perplexity : 4.15589 : new best
+[2026-10-10 14:35:57] [valid] Ep. 16 : Up. 2000 : bleu : 36.7914 : new best
+[2026-10-10 14:36:03] [valid] Ep. 16 : Up. 2000 : ce-mean-words : 1.34063 : new best
+[2026-10-10 14:36:09] [valid] Ep. 16 : Up. 2000 : perplexity : 3.82143 : new best
+[2026-10-10 14:42:24] [valid] Ep. 19 : Up. 2400 : bleu : 38.9179 : new best
+[2026-10-10 14:42:34] [valid] Ep. 19 : Up. 2400 : ce-mean-words : 1.28471 : new best
+[2026-10-10 14:42:44] [valid] Ep. 19 : Up. 2400 : perplexity : 3.6136 : new best
+[2026-10-10 14:50:16] [valid] Ep. 22 : Up. 2800 : bleu : 40.8163 : new best
+[2026-10-10 14:50:21] [valid] Ep. 22 : Up. 2800 : ce-mean-words : 1.25946 : new best
+[2026-10-10 14:50:28] [valid] Ep. 22 : Up. 2800 : perplexity : 3.52353 : new best
+[2026-10-10 14:55:59] [valid] Ep. 25 : Up. 3200 : bleu : 42.1445 : new best
+[2026-10-10 14:56:04] [valid] Ep. 25 : Up. 3200 : ce-mean-words : 1.24452 : new best
+[2026-10-10 14:56:10] [valid] Ep. 25 : Up. 3200 : perplexity : 3.47127 : new best
+[2026-10-10 15:01:23] [valid] Ep. 28 : Up. 3600 : bleu : 42.3633 : new best
+[2026-10-10 15:01:29] [valid] Ep. 28 : Up. 3600 : ce-mean-words : 1.23596 : new best
+[2026-10-10 15:01:35] [valid] Ep. 28 : Up. 3600 : perplexity : 3.44166 : new best
+[2026-10-10 15:06:51] [valid] Ep. 31 : Up. 4000 : bleu : 43.7108 : new best
+[2026-10-10 15:06:57] [valid] Ep. 31 : Up. 4000 : ce-mean-words : 1.2437 : stalled 1 times (last best: 1.23596)
+[2026-10-10 15:07:02] [valid] Ep. 31 : Up. 4000 : perplexity : 3.46841 : stalled 1 times (last best: 3.44166)
+[2026-10-10 15:12:56] [valid] Ep. 34 : Up. 4400 : bleu : 43.1259 : stalled 1 times (last best: 43.7108)
+[2026-10-10 15:13:02] [valid] Ep. 34 : Up. 4400 : ce-mean-words : 1.25903 : stalled 2 times (last best: 1.23596)
+[2026-10-10 15:13:08] [valid] Ep. 34 : Up. 4400 : perplexity : 3.52201 : stalled 2 times (last best: 3.44166)
+[2026-10-10 15:19:52] [valid] Ep. 37 : Up. 4800 : bleu : 44.2168 : new best
+[2026-10-10 15:19:58] [valid] Ep. 37 : Up. 4800 : ce-mean-words : 1.25096 : stalled 3 times (last best: 1.23596)
+[2026-10-10 15:20:05] [valid] Ep. 37 : Up. 4800 : perplexity : 3.4937 : stalled 3 times (last best: 3.44166)
+[2026-10-10 15:26:58] [valid] Ep. 40 : Up. 5200 : bleu : 45.0431 : new best
+[2026-10-10 15:27:05] [valid] Ep. 40 : Up. 5200 : ce-mean-words : 1.25974 : stalled 4 times (last best: 1.23596)
+[2026-10-10 15:27:12] [valid] Ep. 40 : Up. 5200 : perplexity : 3.52452 : stalled 4 times (last best: 3.44166)
+[2026-10-10 15:33:18] [valid] Ep. 43 : Up. 5600 : bleu : 45.7051 : new best
+[2026-10-10 15:33:24] [valid] Ep. 43 : Up. 5600 : ce-mean-words : 1.27225 : stalled 5 times (last best: 1.23596)
+[2026-10-10 15:33:30] [valid] Ep. 43 : Up. 5600 : perplexity : 3.56888 : stalled 5 times (last best: 3.44166)
+[2026-10-10 15:39:20] [valid] Ep. 46 : Up. 6000 : bleu : 44.4533 : stalled 1 times (last best: 45.7051)
+[2026-10-10 15:39:26] [valid] Ep. 46 : Up. 6000 : ce-mean-words : 1.29207 : stalled 6 times (last best: 1.23596)
+[2026-10-10 15:39:32] [valid] Ep. 46 : Up. 6000 : perplexity : 3.64033 : stalled 6 times (last best: 3.44166)
+[2026-10-10 15:45:22] [valid] Ep. 49 : Up. 6400 : bleu : 44.934 : stalled 2 times (last best: 45.7051)
+[2026-10-10 15:45:28] [valid] Ep. 49 : Up. 6400 : ce-mean-words : 1.29444 : stalled 7 times (last best: 1.23596)
+[2026-10-10 15:45:34] [valid] Ep. 49 : Up. 6400 : perplexity : 3.64895 : stalled 7 times (last best: 3.44166)
+[2026-10-10 15:51:27] [valid] Ep. 52 : Up. 6800 : bleu : 45.3089 : stalled 3 times (last best: 45.7051)
+[2026-10-10 15:51:33] [valid] Ep. 52 : Up. 6800 : ce-mean-words : 1.30421 : stalled 8 times (last best: 1.23596)
+[2026-10-10 15:51:38] [valid] Ep. 52 : Up. 6800 : perplexity : 3.68478 : stalled 8 times (last best: 3.44166)
+[2026-10-10 15:57:32] [valid] Ep. 55 : Up. 7200 : bleu : 43.9534 : stalled 4 times (last best: 45.7051)
+[2026-10-10 15:57:38] [valid] Ep. 55 : Up. 7200 : ce-mean-words : 1.31523 : stalled 9 times (last best: 1.23596)
+[2026-10-10 15:57:44] [valid] Ep. 55 : Up. 7200 : perplexity : 3.72559 : stalled 9 times (last best: 3.44166)
+[2026-10-10 16:03:21] [valid] Ep. 58 : Up. 7600 : bleu : 44.4754 : stalled 5 times (last best: 45.7051)
+[2026-10-10 16:03:27] [valid] Ep. 58 : Up. 7600 : ce-mean-words : 1.32774 : stalled 10 times (last best: 1.23596)
+[2026-10-10 16:03:33] [valid] Ep. 58 : Up. 7600 : perplexity : 3.77252 : stalled 10 times (last best: 3.44166)
+[2026-10-10 16:09:05] [valid] Ep. 61 : Up. 7980 : bleu : 45.788 : new best
+[2026-10-10 16:09:11] [valid] Ep. 61 : Up. 7980 : ce-mean-words : 1.34364 : stalled 11 times (last best: 1.23596)
+[2026-10-10 16:09:17] [valid] Ep. 61 : Up. 7980 : perplexity : 3.83297 : stalled 11 times (last best: 3.44166)

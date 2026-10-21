@@ -1,0 +1,4 @@
+task,model,seed,best_epoch,val_macro_f1,test_macro_f1,per_label_test_f1
+task1,xlmr,42,4,0.8113,0.77,{}
+task2,xlmr,42,3,0.5663,0.56,"{""political"": 0.679, ""racial/ethnic"": 0.5385, ""religious"": 0.4865, ""gender/sexual"": 0.6412, ""other"": 0.4549}"
+task3,xlmr,42,4,0.4943,0.4813,"{""stereotype"": 0.4252, ""vilification"": 0.6658, ""dehumanization"": 0.4596, ""extreme_language"": 0.5269, ""lack_of_empathy"": 0.3879, ""invalidation"": 0.4223}"

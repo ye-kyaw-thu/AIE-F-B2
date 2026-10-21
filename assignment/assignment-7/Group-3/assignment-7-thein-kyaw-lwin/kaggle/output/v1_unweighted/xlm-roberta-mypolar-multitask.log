@@ -1,0 +1,183 @@
+[{"stream_name":"stdout","time":32.749516162,"data":"[ok] Data Directory: /kaggle/input/datasets/theinkyawlwin/mypolar-assignment7\n"}
+,{"stream_name":"stdout","time":32.757782227999996,"data":"\n"}
+,{"stream_name":"stdout","time":32.75780217,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":32.757807623,"data":"# Step 1: Environment \u0026 Hardware Verification\n"}
+,{"stream_name":"stdout","time":32.757812025,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":32.757816649,"data":"\n"}
+,{"stream_name":"stdout","time":33.014574465,"data":"[Device] Using compute device: cuda\n"}
+,{"stream_name":"stdout","time":33.060739761,"data":"[GPU Name] Tesla T4\n"}
+,{"stream_name":"stdout","time":33.060777175,"data":"[VRAM] Total memory: 15.64 GB\n"}
+,{"stream_name":"stdout","time":33.06078215,"data":"\n"}
+,{"stream_name":"stdout","time":33.060786295,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":33.06078998,"data":"# Step 2: Ingest Stratified Clean Datasets\n"}
+,{"stream_name":"stdout","time":33.060793365,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":33.060796804,"data":"\n"}
+,{"stream_name":"stdout","time":33.231334591,"data":"Train split : 8,054 samples (/kaggle/input/datasets/theinkyawlwin/mypolar-assignment7/train.csv)\n"}
+,{"stream_name":"stdout","time":33.23136592,"data":"Val split   : 1,007 samples (/kaggle/input/datasets/theinkyawlwin/mypolar-assignment7/val.csv)\n"}
+,{"stream_name":"stdout","time":33.231372315,"data":"Test split  : 1,007 samples (/kaggle/input/datasets/theinkyawlwin/mypolar-assignment7/test.csv)\n"}
+,{"stream_name":"stdout","time":33.231380316,"data":"\n"}
+,{"stream_name":"stdout","time":33.231395863,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":33.231400125,"data":"# Step 3: Load Pretrained Tokenizer (xlm-roberta-base)\n"}
+,{"stream_name":"stdout","time":33.231403982,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":33.231407989,"data":"\n"}
+,{"stream_name":"stderr","time":33.346068728,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stdout","time":36.69255389,"data":"\n"}
+,{"stream_name":"stdout","time":36.69259968,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":36.692605872,"data":"# Step 4: Initialize Multi-Task Model Architecture\n"}
+,{"stream_name":"stdout","time":36.692610449,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":36.692614186,"data":"\n"}
+,{"stream_name":"stderr","time":39.807533871,"data":"\rLoading weights:   0%|          | 0/199 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 199/199 [00:00\u003c00:00, 2500.36it/s]\n"}
+,{"stream_name":"stderr","time":39.824865563,"data":"[transformers] \u001b[1mXLMRobertaModel LOAD REPORT\u001b[0m from: xlm-roberta-base\n"}
+,{"stream_name":"stderr","time":39.824907334,"data":"Key                       | Status     |  | \n"}
+,{"stream_name":"stderr","time":39.824913168,"data":"--------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":39.824917173,"data":"lm_head.bias              | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":39.824925696,"data":"lm_head.layer_norm.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":39.82494422,"data":"lm_head.dense.weight      | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":39.824947678,"data":"lm_head.layer_norm.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":39.824951035,"data":"lm_head.dense.bias        | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":39.824959982,"data":"\n"}
+,{"stream_name":"stderr","time":39.824962892,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":39.824965142,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stderr","time":44.734375233,"data":"/kaggle/src/script.py:377: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":44.734413514,"data":"  scaler = torch.cuda.amp.GradScaler(enabled=(device.type == \"cuda\"))\n"}
+,{"stream_name":"stdout","time":44.734399864,"data":"\n"}
+,{"stream_name":"stdout","time":44.734434117,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":44.734443483,"data":"# Step 5: Training Loop (Multi-Task Fine-Tuning)\n"}
+,{"stream_name":"stdout","time":44.734447961,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":44.7344538,"data":"\n"}
+,{"stream_name":"stderr","time":44.772732829,"data":"/kaggle/src/script.py:397: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":44.772763378,"data":"  with torch.cuda.amp.autocast(enabled=(device.type == \"cuda\")):\n"}
+,{"stream_name":"stdout","time":61.727153724,"data":"Epoch [1/5] | Step [50/252] | Step Loss: 1.8154\n"}
+,{"stream_name":"stdout","time":77.671496449,"data":"Epoch [1/5] | Step [100/252] | Step Loss: 1.5900\n"}
+,{"stream_name":"stdout","time":93.825450061,"data":"Epoch [1/5] | Step [150/252] | Step Loss: 1.4107\n"}
+,{"stream_name":"stdout","time":110.507407202,"data":"Epoch [1/5] | Step [200/252] | Step Loss: 1.3998\n"}
+,{"stream_name":"stdout","time":127.665454026,"data":"Epoch [1/5] | Step [250/252] | Step Loss: 1.3749\n"}
+,{"stream_name":"stdout","time":128.308442757,"data":"Epoch [1/5] | Step [252/252] | Step Loss: 1.2178\n"}
+,{"stream_name":"stdout","time":138.125709879,"data":"\n"}
+,{"stream_name":"stdout","time":138.125746333,"data":"--- Epoch 1 Validation Summary (93.4s) ---\n"}
+,{"stream_name":"stdout","time":138.125758305,"data":"  Train Loss          : 1.5914\n"}
+,{"stream_name":"stdout","time":138.12576194,"data":"  Val Loss            : 1.3493\n"}
+,{"stream_name":"stdout","time":138.1257649,"data":"  Overall Macro F1    : 27.34%\n"}
+,{"stream_name":"stdout","time":138.125768483,"data":"  Task 1 (Pol) F1/Acc : 74.47% / 74.48%\n"}
+,{"stream_name":"stdout","time":138.125771844,"data":"  Task 2 (Type) F1    : Macro=0.13% | Micro=0.25%\n"}
+,{"stream_name":"stdout","time":138.125775023,"data":"  Task 3 (Manif) F1   : Macro=7.42% | Micro=17.73%\n"}
+,{"stream_name":"stdout","time":138.125778047,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 27.34%\n"}
+,{"stream_name":"stderr","time":139.615167198,"data":"/kaggle/src/script.py:397: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":139.615210631,"data":"  with torch.cuda.amp.autocast(enabled=(device.type == \"cuda\")):\n"}
+,{"stream_name":"stdout","time":156.832537345,"data":"Epoch [2/5] | Step [50/252] | Step Loss: 1.3031\n"}
+,{"stream_name":"stdout","time":173.704989967,"data":"Epoch [2/5] | Step [100/252] | Step Loss: 1.3890\n"}
+,{"stream_name":"stdout","time":190.611493759,"data":"Epoch [2/5] | Step [150/252] | Step Loss: 1.3502\n"}
+,{"stream_name":"stdout","time":207.779159325,"data":"Epoch [2/5] | Step [200/252] | Step Loss: 1.1784\n"}
+,{"stream_name":"stdout","time":225.103556925,"data":"Epoch [2/5] | Step [250/252] | Step Loss: 1.2135\n"}
+,{"stream_name":"stdout","time":225.734247967,"data":"Epoch [2/5] | Step [252/252] | Step Loss: 1.1844\n"}
+,{"stream_name":"stdout","time":234.900837113,"data":"\n"}
+,{"stream_name":"stdout","time":234.900877462,"data":"--- Epoch 2 Validation Summary (95.3s) ---\n"}
+,{"stream_name":"stdout","time":234.900905661,"data":"  Train Loss          : 1.2822\n"}
+,{"stream_name":"stdout","time":234.900909158,"data":"  Val Loss            : 1.2472\n"}
+,{"stream_name":"stdout","time":234.900912317,"data":"  Overall Macro F1    : 33.13%\n"}
+,{"stream_name":"stdout","time":234.900915542,"data":"  Task 1 (Pol) F1/Acc : 76.27% / 76.27%\n"}
+,{"stream_name":"stdout","time":234.900918596,"data":"  Task 2 (Type) F1    : Macro=11.31% | Micro=29.85%\n"}
+,{"stream_name":"stdout","time":234.900921836,"data":"  Task 3 (Manif) F1   : Macro=11.81% | Micro=27.25%\n"}
+,{"stream_name":"stdout","time":234.900925004,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 33.13%\n"}
+,{"stream_name":"stderr","time":236.755787512,"data":"/kaggle/src/script.py:397: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":236.755846395,"data":"  with torch.cuda.amp.autocast(enabled=(device.type == \"cuda\")):\n"}
+,{"stream_name":"stdout","time":253.777047721,"data":"Epoch [3/5] | Step [50/252] | Step Loss: 1.1504\n"}
+,{"stream_name":"stdout","time":270.823274597,"data":"Epoch [3/5] | Step [100/252] | Step Loss: 0.9560\n"}
+,{"stream_name":"stdout","time":288.068786012,"data":"Epoch [3/5] | Step [150/252] | Step Loss: 1.1807\n"}
+,{"stream_name":"stdout","time":305.308634913,"data":"Epoch [3/5] | Step [200/252] | Step Loss: 1.0941\n"}
+,{"stream_name":"stdout","time":322.371756222,"data":"Epoch [3/5] | Step [250/252] | Step Loss: 1.0023\n"}
+,{"stream_name":"stdout","time":322.984547535,"data":"Epoch [3/5] | Step [252/252] | Step Loss: 1.2525\n"}
+,{"stream_name":"stdout","time":332.024825141,"data":"\n"}
+,{"stream_name":"stdout","time":332.024882113,"data":"--- Epoch 3 Validation Summary (95.3s) ---\n"}
+,{"stream_name":"stdout","time":332.024893279,"data":"  Train Loss          : 1.1675\n"}
+,{"stream_name":"stdout","time":332.024914088,"data":"  Val Loss            : 1.2414\n"}
+,{"stream_name":"stdout","time":332.024919082,"data":"  Overall Macro F1    : 37.15%\n"}
+,{"stream_name":"stdout","time":332.024924255,"data":"  Task 1 (Pol) F1/Acc : 75.74% / 76.46%\n"}
+,{"stream_name":"stdout","time":332.024929156,"data":"  Task 2 (Type) F1    : Macro=18.54% | Micro=42.99%\n"}
+,{"stream_name":"stdout","time":332.024934167,"data":"  Task 3 (Manif) F1   : Macro=17.16% | Micro=38.20%\n"}
+,{"stream_name":"stdout","time":332.024939526,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 37.15%\n"}
+,{"stream_name":"stderr","time":333.860756174,"data":"/kaggle/src/script.py:397: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":333.860789632,"data":"  with torch.cuda.amp.autocast(enabled=(device.type == \"cuda\")):\n"}
+,{"stream_name":"stdout","time":350.927738426,"data":"Epoch [4/5] | Step [50/252] | Step Loss: 1.0543\n"}
+,{"stream_name":"stdout","time":368.178743102,"data":"Epoch [4/5] | Step [100/252] | Step Loss: 1.1201\n"}
+,{"stream_name":"stdout","time":385.313134701,"data":"Epoch [4/5] | Step [150/252] | Step Loss: 1.2062\n"}
+,{"stream_name":"stdout","time":402.266031297,"data":"Epoch [4/5] | Step [200/252] | Step Loss: 1.1546\n"}
+,{"stream_name":"stdout","time":419.326133797,"data":"Epoch [4/5] | Step [250/252] | Step Loss: 0.8970\n"}
+,{"stream_name":"stdout","time":419.947570973,"data":"Epoch [4/5] | Step [252/252] | Step Loss: 1.1783\n"}
+,{"stream_name":"stdout","time":429.168217652,"data":"\n"}
+,{"stream_name":"stdout","time":429.1682642,"data":"--- Epoch 4 Validation Summary (95.3s) ---\n"}
+,{"stream_name":"stdout","time":429.168270695,"data":"  Train Loss          : 1.0855\n"}
+,{"stream_name":"stdout","time":429.168276063,"data":"  Val Loss            : 1.1714\n"}
+,{"stream_name":"stdout","time":429.168281183,"data":"  Overall Macro F1    : 39.59%\n"}
+,{"stream_name":"stdout","time":429.168286286,"data":"  Task 1 (Pol) F1/Acc : 79.19% / 79.44%\n"}
+,{"stream_name":"stdout","time":429.168291596,"data":"  Task 2 (Type) F1    : Macro=23.06% | Micro=42.67%\n"}
+,{"stream_name":"stdout","time":429.168296833,"data":"  Task 3 (Manif) F1   : Macro=16.52% | Micro=37.16%\n"}
+,{"stream_name":"stdout","time":429.168302175,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 39.59%\n"}
+,{"stream_name":"stderr","time":431.015055848,"data":"/kaggle/src/script.py:397: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":431.015094211,"data":"  with torch.cuda.amp.autocast(enabled=(device.type == \"cuda\")):\n"}
+,{"stream_name":"stdout","time":448.208202737,"data":"Epoch [5/5] | Step [50/252] | Step Loss: 1.0514\n"}
+,{"stream_name":"stdout","time":465.323296095,"data":"Epoch [5/5] | Step [100/252] | Step Loss: 0.9250\n"}
+,{"stream_name":"stdout","time":482.386225249,"data":"Epoch [5/5] | Step [150/252] | Step Loss: 0.9040\n"}
+,{"stream_name":"stdout","time":499.494471575,"data":"Epoch [5/5] | Step [200/252] | Step Loss: 1.0878\n"}
+,{"stream_name":"stdout","time":516.69150791,"data":"Epoch [5/5] | Step [250/252] | Step Loss: 0.9716\n"}
+,{"stream_name":"stdout","time":517.313626662,"data":"Epoch [5/5] | Step [252/252] | Step Loss: 1.2012\n"}
+,{"stream_name":"stdout","time":526.497959396,"data":"\n"}
+,{"stream_name":"stdout","time":526.49800709,"data":"--- Epoch 5 Validation Summary (95.5s) ---\n"}
+,{"stream_name":"stdout","time":526.498013684,"data":"  Train Loss          : 1.0268\n"}
+,{"stream_name":"stdout","time":526.498018826,"data":"  Val Loss            : 1.1871\n"}
+,{"stream_name":"stdout","time":526.498023853,"data":"  Overall Macro F1    : 40.65%\n"}
+,{"stream_name":"stdout","time":526.498028976,"data":"  Task 1 (Pol) F1/Acc : 79.53% / 79.64%\n"}
+,{"stream_name":"stdout","time":526.498033768,"data":"  Task 2 (Type) F1    : Macro=26.68% | Micro=44.41%\n"}
+,{"stream_name":"stdout","time":526.498038905,"data":"  Task 3 (Manif) F1   : Macro=15.74% | Micro=35.14%\n"}
+,{"stream_name":"stdout","time":526.498043713,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 40.65%\n"}
+,{"stream_name":"stdout","time":528.313688356,"data":"\n"}
+,{"stream_name":"stdout","time":528.313740572,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":528.313748334,"data":"# Step 6: Blind Test Set Evaluation on Best Checkpoint\n"}
+,{"stream_name":"stdout","time":528.313765674,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":528.313769985,"data":"\n"}
+,{"stream_name":"stdout","time":528.313773786,"data":"Loading best checkpoint from: /kaggle/working/best_xlm_roberta_multitask.pt\n"}
+,{"stream_name":"stdout","time":538.205266696,"data":"\n"}
+,{"stream_name":"stdout","time":538.205335876,"data":"===========================================================================\n"}
+,{"stream_name":"stdout","time":538.205342761,"data":"FINAL BENCHMARK TEST SET EVALUATION REPORT\n"}
+,{"stream_name":"stdout","time":538.205348228,"data":"===========================================================================\n"}
+,{"stream_name":"stdout","time":538.205353153,"data":"Overall Composite Macro F1 : 39.75%\n"}
+,{"stream_name":"stdout","time":538.205357105,"data":"\n"}
+,{"stream_name":"stdout","time":538.205361785,"data":"[Task 1: Polarization Detection]\n"}
+,{"stream_name":"stdout","time":538.205366162,"data":"  Macro F1 : 77.22%\n"}
+,{"stream_name":"stdout","time":538.205370064,"data":"  Accuracy : 77.26%\n"}
+,{"stream_name":"stdout","time":538.205373737,"data":"\n"}
+,{"stream_name":"stdout","time":538.205377411,"data":"[Task 2: Target Type Classification]\n"}
+,{"stream_name":"stdout","time":538.205381477,"data":"  Macro F1 : 26.12%\n"}
+,{"stream_name":"stdout","time":538.205386051,"data":"  Micro F1 : 43.16%\n"}
+,{"stream_name":"stdout","time":538.207481406,"data":"    - political      : F1 = 65.82%\n"}
+,{"stream_name":"stdout","time":538.209446832,"data":"    - racial/ethnic  : F1 = 0.00%\n"}
+,{"stream_name":"stdout","time":538.211432957,"data":"    - religious      : F1 = 54.55%\n"}
+,{"stream_name":"stdout","time":538.213204117,"data":"    - gender/sexual  : F1 = 0.00%\n"}
+,{"stream_name":"stdout","time":538.215202431,"data":"    - other          : F1 = 10.24%\n"}
+,{"stream_name":"stdout","time":538.215216518,"data":"\n"}
+,{"stream_name":"stdout","time":538.215221038,"data":"[Task 3: Manifestation Identification]\n"}
+,{"stream_name":"stdout","time":538.215225212,"data":"  Macro F1 : 15.90%\n"}
+,{"stream_name":"stdout","time":538.215229442,"data":"  Micro F1 : 33.50%\n"}
+,{"stream_name":"stdout","time":538.216994403,"data":"    - stereotype       : F1 = 0.00%\n"}
+,{"stream_name":"stdout","time":538.218899848,"data":"    - vilification     : F1 = 62.20%\n"}
+,{"stream_name":"stdout","time":538.220980146,"data":"    - dehumanization   : F1 = 0.00%\n"}
+,{"stream_name":"stdout","time":538.222946333,"data":"    - extreme_language : F1 = 33.21%\n"}
+,{"stream_name":"stdout","time":538.224949206,"data":"    - lack_of_empathy  : F1 = 0.00%\n"}
+,{"stream_name":"stdout","time":538.226885033,"data":"    - invalidation     : F1 = 0.00%\n"}
+,{"stream_name":"stdout","time":538.22690089,"data":"===========================================================================\n"}
+,{"stream_name":"stdout","time":538.226907258,"data":"\n"}
+,{"stream_name":"stdout","time":538.226912453,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":538.226917503,"data":"# Step 7: Persisting Artifacts \u0026 Export\n"}
+,{"stream_name":"stdout","time":538.226922411,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":538.226926806,"data":"\n"}
+,{"stream_name":"stdout","time":538.252156418,"data":"[Saved] Test predictions: /kaggle/working/test_predictions_multitask.csv\n"}
+,{"stream_name":"stdout","time":538.252480665,"data":"[Saved] Evaluation summary JSON: /kaggle/working/test_evaluation_summary.json\n"}
+,{"stream_name":"stdout","time":538.252512395,"data":"\n"}
+,{"stream_name":"stdout","time":538.25251655,"data":"[DONE] Full pipeline executed successfully in 8.43 minutes.\n"}
+,{"stream_name":"stderr","time":545.126439448,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":545.126469313,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":545.420050136,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":545.420079034,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":546.21901878,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":547.391761679,"data":"[NbConvertApp] Writing 367384 bytes to __results__.html\n"}
+]

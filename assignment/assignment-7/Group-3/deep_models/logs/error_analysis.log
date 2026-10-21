@@ -1,0 +1,155 @@
+B. Task 1 errors
+  TF-IDF word+char LogReg  C=3  val 0.7964  test 0.7899
+C. Task 2 / Task 3 errors
+  task2 TF-IDF char LinearSVC  C=0.1  val 0.5640  test 0.5716
+  task3 TF-IDF char LinearSVC  C=0.3  val 0.5242  test 0.5092
+A. Text unit (TF-IDF + linear)
+  word (whitespace)      task1  C=3      val 0.7376  test 0.7506
+  word (whitespace)      task2  C=0.1    val 0.4095  test 0.4101
+  word (whitespace)      task3  C=0.1    val 0.4263  test 0.4379
+  syllable               task1  C=1      val 0.7933  test 0.7848
+  syllable               task2  C=0.1    val 0.5769  test 0.5488
+  syllable               task3  C=0.1    val 0.5119  test 0.4753
+  char (within tokens)   task1  C=3      val 0.7917  test 0.7823
+  char (within tokens)   task2  C=0.1    val 0.5640  test 0.5716
+  char (within tokens)   task3  C=0.3    val 0.5242  test 0.5092
+  char (spaces removed)  task1  C=3      val 0.7889  test 0.7818
+  char (spaces removed)  task2  C=0.1    val 0.5504  test 0.5451
+  char (spaces removed)  task3  C=0.1    val 0.5013  test 0.4866
+
+--- confusion
+model  macro_f1  true_neg  false_pos  false_neg  true_pos
+tfidf    0.7899       414        108        117       432
+
+--- by_length
+        length   n  polarized_share  tfidf_acc  tfidf_false_pos_rate  tfidf_false_neg_rate
+1-15 syllables 148            0.615      0.736                 0.316                 0.231
+         16-30 345            0.542      0.757                 0.323                 0.176
+         31-60 390            0.467      0.821                 0.130                 0.236
+           61+ 188            0.473      0.830                 0.121                 0.225
+
+--- by_segmentation
+                   segmentation   n  polarized_share  tfidf_acc  tfidf_false_pos_rate  tfidf_false_neg_rate
+word-segmented (<7 chars/token) 504            0.585      0.829                 0.287                 0.088
+        phrase-segmented (7-15) 434            0.498      0.772                 0.133                 0.324
+              unsegmented (15+) 133            0.286      0.699                 0.200                 0.553
+
+--- by_contributor
+           contributor  n  polarized_share  tfidf_acc  tfidf_false_pos_rate  tfidf_false_neg_rate
+                   mts 26            1.000      0.885                   NaN                 0.115
+     mya_TheinKyawLwin 37            0.541      0.919                 0.059                 0.100
+         mya_Thida_Aye 74            0.608      0.743                 0.172                 0.311
+               mya_acn 51            0.608      0.667                 0.450                 0.258
+mya_aint_kyi_phyu_shin 54            0.796      0.815                 0.455                 0.116
+        mya_hanzawhtet 22            0.727      0.500                 0.000                 0.688
+    mya_htooeaindratin 29            0.207      0.586                 0.435                 0.333
+      mya_htunaungkyaw 14            0.500      0.714                 0.143                 0.429
+             mya_khine 62            0.306      0.887                 0.116                 0.105
+           mya_myothet 50            0.320      0.520                 0.353                 0.750
+       mya_ohnmarnyunt 52            0.000      0.981                 0.019                   NaN
+     mya_phyohtetpwint 65            0.954      0.954                 0.667                 0.016
+        mya_phyomyatoo 60            0.483      0.817                 0.097                 0.276
+       mya_punkhattgar 68            0.103      0.750                 0.262                 0.143
+                mya_ri 27            0.815      0.778                 0.600                 0.136
+        mya_soethandar 73            0.945      0.767                 0.750                 0.203
+        mya_suyehlaing 65            0.415      0.738                 0.263                 0.259
+       mya_thantsintun 61            0.885      0.689                 0.286                 0.315
+    mya_waiyanhtetaung 68            0.353      0.750                 0.364                 0.042
+          mya_yelintun 45            0.333      0.956                 0.000                 0.133
+               unknown 68            0.162      0.926                 0.070                 0.091
+
+--- recall_by_type
+           label  n_polarized  tfidf_recall
+       political          287         0.808
+   racial/ethnic           86         0.767
+       religious           37         0.892
+   gender/sexual           64         0.797
+           other          162         0.772
+(no label given)           23         0.478
+
+--- recall_by_manifestation
+           label  n_polarized  tfidf_recall
+      stereotype          125         0.800
+    vilification          314         0.844
+  dehumanization          103         0.874
+extreme_language          173         0.827
+ lack_of_empathy          106         0.896
+    invalidation          168         0.875
+(no label given)           47         0.532
+
+--- top_char_ngrams
+polarized_ngram  weight not_polarized_ngram  weight_
+             း     2.70                တယ်။    -2.82
+            ွေး    2.50                  အ     -2.68
+              သ    2.39                  ။     -2.65
+             မဲ    2.38                  အ     -2.63
+             .     2.37                  သ     -2.43
+             ေ     2.27                တယ်။    -2.32
+            သတ်    2.24                   (    -2.30
+             ်     2.23                  ်။    -2.30
+             လူ    2.17                 ယ်။    -2.27
+             ခံ    2.09                  ၏။    -2.21
+             ဖာ    2.05                 ၏။     -2.20
+            ခွေ    2.03               တယ်။     -2.12
+           ခွေး    2.01                  )     -2.11
+            ပစ်    1.99                 ရာ     -2.10
+             ဖာ    1.93                ယ်။     -2.08
+             မဲ    1.87                 ်။     -2.05
+             နင    1.85                မှု     -1.92
+           သင့်    1.84                  သ     -1.91
+            သင့    1.84                  ရေ    -1.86
+             သတ    1.82                 မှု    -1.76
+            ခို    1.81                  က     -1.73
+             သူ    1.81                  ၊     -1.70
+             ခိ    1.80                  ၍     -1.70
+            ီးရ    1.79                  ပါ    -1.64
+             သေ    1.79                တစ်     -1.64
+
+--- task2_per_label
+        label  support  predicted  precision  recall    f1  false_pos  false_neg
+    political      265        318      0.635   0.762 0.693        116         63
+racial/ethnic       91        115      0.522   0.659 0.583         55         31
+    religious       39         46      0.457   0.538 0.494         25         18
+gender/sexual       65         91      0.516   0.723 0.603         44         18
+        other      157        263      0.388   0.650 0.486        161         55
+
+--- task2_missed_instead
+ missed_label  n_missed  nothing_predicted  pred_racial/ethnic  pred_religious  pred_gender/sexual  pred_other  pred_political
+    political        63              0.540               0.159           0.048               0.032       0.286             NaN
+racial/ethnic        31              0.516                 NaN           0.097               0.000       0.161           0.323
+    religious        18              0.278               0.167             NaN               0.000       0.222           0.556
+gender/sexual        18              0.500               0.056           0.056                 NaN       0.444           0.056
+        other        55              0.582               0.073           0.018               0.073         NaN           0.273
+
+--- task2_summary
+ task  exact_match  true_labels_per_sentence  predicted_labels_per_sentence  no_true_label  no_predicted_label
+task2        0.568                     0.576                          0.778          0.503               0.426
+
+--- task3_per_label
+           label  support  predicted  precision  recall    f1  false_pos  false_neg
+      stereotype      134        195      0.395   0.575 0.468        118         57
+    vilification      309        360      0.600   0.699 0.646        144         93
+  dehumanization       98        115      0.443   0.520 0.479         64         47
+extreme_language      182        241      0.477   0.632 0.544        126         67
+ lack_of_empathy      114        155      0.406   0.553 0.468         92         51
+    invalidation      164        218      0.394   0.524 0.450        132         78
+
+--- task3_missed_instead
+    missed_label  n_missed  nothing_predicted  pred_vilification  pred_dehumanization  pred_extreme_language  pred_lack_of_empathy  pred_invalidation  pred_stereotype
+      stereotype        57              0.386              0.421                0.123                  0.386                 0.175              0.228              NaN
+    vilification        93              0.581                NaN                0.065                  0.172                 0.065              0.097            0.204
+  dehumanization        47              0.191              0.638                  NaN                  0.426                 0.213              0.340            0.468
+extreme_language        67              0.388              0.448                0.060                    NaN                 0.179              0.224            0.239
+ lack_of_empathy        51              0.235              0.588                0.098                  0.333                   NaN              0.255            0.373
+    invalidation        78              0.346              0.487                0.154                  0.372                 0.167                NaN            0.244
+
+--- task3_summary
+ task  exact_match  true_labels_per_sentence  predicted_labels_per_sentence  no_true_label  no_predicted_label
+task3        0.474                     0.989                          1.269          0.531               0.509
+
+--- unit_comparison_tfidf
+             features  task1_val  task1_test  task2_val  task2_test  task3_val  task3_test
+    word (whitespace)     0.7376      0.7506     0.4095      0.4101     0.4263      0.4379
+             syllable     0.7933      0.7848     0.5769      0.5488     0.5119      0.4753
+ char (within tokens)     0.7917      0.7823     0.5640      0.5716     0.5242      0.5092
+char (spaces removed)     0.7889      0.7818     0.5504      0.5451     0.5013      0.4866

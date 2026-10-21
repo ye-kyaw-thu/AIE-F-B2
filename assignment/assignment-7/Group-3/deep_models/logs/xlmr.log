@@ -1,0 +1,57 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+device: mps
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4901.13it/s]
+[1mXLMRobertaModel LOAD REPORT[0m from: FacebookAI/xlm-roberta-base
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.dense.weight      | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+lm_head.bias              | UNEXPECTED |  | 
+lm_head.dense.bias        | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  task1 xlmr seed=42 epoch  1  loss 0.5679  val_f1 0.7656  (499s)
+  task1 xlmr seed=42 epoch  2  loss 0.4498  val_f1 0.7896  (517s)
+  task1 xlmr seed=42 epoch  3  loss 0.3690  val_f1 0.7950  (501s)
+  task1 xlmr seed=42 epoch  4  loss 0.2951  val_f1 0.8113  (468s)
+=> {'task': 'task1', 'model': 'xlmr', 'seed': 42, 'best_epoch': 4, 'val_macro_f1': 0.8113, 'test_macro_f1': 0.77, 'per_label_test_f1': '{}'}
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 4198.31it/s]
+[1mXLMRobertaModel LOAD REPORT[0m from: FacebookAI/xlm-roberta-base
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.dense.weight      | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+lm_head.bias              | UNEXPECTED |  | 
+lm_head.dense.bias        | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  task2 xlmr seed=42 epoch  1  loss 1.1060  val_f1 0.3733  (493s)
+  task2 xlmr seed=42 epoch  2  loss 0.8273  val_f1 0.5289  (485s)
+  task2 xlmr seed=42 epoch  3  loss 0.6763  val_f1 0.5663  (484s)
+  task2 xlmr seed=42 epoch  4  loss 0.5699  val_f1 0.5541  (384s)
+=> {'task': 'task2', 'model': 'xlmr', 'seed': 42, 'best_epoch': 3, 'val_macro_f1': 0.5663, 'test_macro_f1': 0.56, 'per_label_test_f1': '{"political": 0.679, "racial/ethnic": 0.5385, "religious": 0.4865, "gender/sexual": 0.6412, "other": 0.4549}'}
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8211.26it/s]
+[1mXLMRobertaModel LOAD REPORT[0m from: FacebookAI/xlm-roberta-base
+Key                       | Status     |  | 
+--------------------------+------------+--+-
+lm_head.dense.weight      | UNEXPECTED |  | 
+lm_head.layer_norm.weight | UNEXPECTED |  | 
+lm_head.layer_norm.bias   | UNEXPECTED |  | 
+lm_head.bias              | UNEXPECTED |  | 
+lm_head.dense.bias        | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+  task3 xlmr seed=42 epoch  1  loss 1.0907  val_f1 0.4312  (269s)
+  task3 xlmr seed=42 epoch  2  loss 0.9073  val_f1 0.4582  (281s)
+  task3 xlmr seed=42 epoch  3  loss 0.8022  val_f1 0.4678  (274s)
+  task3 xlmr seed=42 epoch  4  loss 0.7305  val_f1 0.4943  (264s)
+=> {'task': 'task3', 'model': 'xlmr', 'seed': 42, 'best_epoch': 4, 'val_macro_f1': 0.4943, 'test_macro_f1': 0.4813, 'per_label_test_f1': '{"stereotype": 0.4252, "vilification": 0.6658, "dehumanization": 0.4596, "extreme_language": 0.5269, "lack_of_empathy": 0.3879, "invalidation": 0.4223}'}

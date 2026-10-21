@@ -1,0 +1,33 @@
+{
+  "name": "rlts-myanmar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "RLTS-MM: Real-Time Logistics Monitoring for Myanmar Trading (B2 Assignment 5 rapid prototype)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.116.0",
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "zustand": "4.5.4",
+    "dexie": "4.0.8",
+    "dexie-react-hooks": "1.1.7",
+    "lucide-react": "0.446.0",
+    "uuid": "11.1.1"
+  },
+  "devDependencies": {
+    "typescript": "5.5.4",
+    "@types/node": "20.14.15",
+    "@types/react": "18.3.5",
+    "@types/react-dom": "18.3.0",
+    "@types/uuid": "9.0.8",
+    "tailwindcss": "3.4.10",
+    "postcss": "8.5.28",
+    "autoprefixer": "10.4.20"
+  }
+}

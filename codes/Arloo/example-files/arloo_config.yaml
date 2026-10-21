@@ -1,0 +1,91 @@
+# Arloo Annotation Tool Configuration
+# ====================================
+# Edit this file to add, remove, or modify annotation fields.
+# Field types: auto_id, text, binary
+# For text fields: set multiline: true for textarea, false for single-line
+# For separator: use ||| to separate multiple values within a field
+# For binary fields: optionally set group to organize them in the UI
+
+project:
+  name: "POLAR Myanmar Annotation"
+  language: "mya"
+
+# ID pattern uses {language}, {annotator}, {index} placeholders
+id_pattern: "{language}_{annotator}_{index}"
+
+fields:
+  # --- Metadata Fields ---
+  - name: id
+    type: auto_id
+    readonly: true
+    description: "Auto-generated unique ID"
+
+  - name: source
+    type: text
+    multiline: true
+    separator: "|||"
+    description: "URL or source of the text. Use ||| to separate multiple sources."
+    placeholder: "https://example.com/article|||Article title"
+
+  - name: text
+    type: text
+    multiline: true
+    description: "The main text to annotate"
+    placeholder: "Enter or paste text here..."
+
+  - name: key_phrase
+    type: text
+    multiline: true
+    separator: "|||"
+    description: "Key phrases. Use ||| to separate multiple phrases."
+    placeholder: "key-phrase-1|||key-phrase-2|||key-phrase-3"
+
+  # --- Sub-Task 1 & 2: Polarization Type ---
+  - name: polarization
+    type: binary
+    group: "Sub-Task 1 & 2: Polarization Type"
+
+  - name: political
+    type: binary
+    group: "Sub-Task 1 & 2: Polarization Type"
+
+  - name: racial/ethnic
+    type: binary
+    group: "Sub-Task 1 & 2: Polarization Type"
+
+  - name: religious
+    type: binary
+    group: "Sub-Task 1 & 2: Polarization Type"
+
+  - name: gender/sexual
+    type: binary
+    group: "Sub-Task 1 & 2: Polarization Type"
+
+  - name: other
+    type: binary
+    group: "Sub-Task 1 & 2: Polarization Type"
+
+  # --- Sub-Task 3: Severity ---
+  - name: stereotype
+    type: binary
+    group: "Sub-Task 3: Severity"
+
+  - name: vilification
+    type: binary
+    group: "Sub-Task 3: Severity"
+
+  - name: dehumanization
+    type: binary
+    group: "Sub-Task 3: Severity"
+
+  - name: extreme_language
+    type: binary
+    group: "Sub-Task 3: Severity"
+
+  - name: lack_of_empathy
+    type: binary
+    group: "Sub-Task 3: Severity"
+
+  - name: invalidation
+    type: binary
+    group: "Sub-Task 3: Severity"

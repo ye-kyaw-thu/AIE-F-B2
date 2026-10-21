@@ -1,0 +1,6 @@
+﻿missed_label,n_missed,nothing_predicted,pred_racial/ethnic,pred_religious,pred_gender/sexual,pred_other,pred_political
+political,63,0.54,0.159,0.048,0.032,0.286,
+racial/ethnic,31,0.516,,0.097,0.0,0.161,0.323
+religious,18,0.278,0.167,,0.0,0.222,0.556
+gender/sexual,18,0.5,0.056,0.056,,0.444,0.056
+other,55,0.582,0.073,0.018,0.073,,0.273

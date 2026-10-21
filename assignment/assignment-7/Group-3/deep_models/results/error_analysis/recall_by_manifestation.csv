@@ -1,0 +1,8 @@
+﻿label,n_polarized,tfidf_recall,bilstm_recall
+stereotype,125,0.8,0.792
+vilification,314,0.844,0.818
+dehumanization,103,0.874,0.883
+extreme_language,173,0.827,0.821
+lack_of_empathy,106,0.896,0.849
+invalidation,168,0.875,0.827
+(no label given),47,0.532,0.553

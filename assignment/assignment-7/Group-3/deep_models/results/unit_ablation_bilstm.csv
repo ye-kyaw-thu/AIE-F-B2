@@ -1,0 +1,10 @@
+task,model,seed,best_epoch,val_macro_f1,test_macro_f1,per_label_test_f1
+task1,bilstm,42,21,0.7833,0.7578,{}
+task1,bilstm_word,42,13,0.7346,0.7282,{}
+task1,bilstm_char,42,12,0.7636,0.7288,{}
+task2,bilstm,42,13,0.538,0.5339,"{""political"": 0.6825, ""racial/ethnic"": 0.5498, ""religious"": 0.4615, ""gender/sexual"": 0.5102, ""other"": 0.4658}"
+task2,bilstm_word,42,23,0.3896,0.3894,"{""political"": 0.6096, ""racial/ethnic"": 0.3779, ""religious"": 0.1875, ""gender/sexual"": 0.3234, ""other"": 0.4489}"
+task2,bilstm_char,42,12,0.4687,0.4703,"{""political"": 0.6383, ""racial/ethnic"": 0.481, ""religious"": 0.3866, ""gender/sexual"": 0.4757, ""other"": 0.3699}"
+task3,bilstm,42,24,0.4919,0.4773,"{""stereotype"": 0.4208, ""vilification"": 0.6285, ""dehumanization"": 0.4909, ""extreme_language"": 0.5198, ""lack_of_empathy"": 0.3682, ""invalidation"": 0.4358}"
+task3,bilstm_word,42,10,0.4243,0.4246,"{""stereotype"": 0.3814, ""vilification"": 0.6062, ""dehumanization"": 0.3322, ""extreme_language"": 0.4299, ""lack_of_empathy"": 0.349, ""invalidation"": 0.4489}"
+task3,bilstm_char,42,15,0.4661,0.4364,"{""stereotype"": 0.3826, ""vilification"": 0.58, ""dehumanization"": 0.3929, ""extreme_language"": 0.4904, ""lack_of_empathy"": 0.3474, ""invalidation"": 0.425}"

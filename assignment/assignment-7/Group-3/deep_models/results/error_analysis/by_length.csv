@@ -1,0 +1,5 @@
+﻿length,n,polarized_share,tfidf_acc,tfidf_false_pos_rate,tfidf_false_neg_rate,bilstm_acc,bilstm_false_pos_rate,bilstm_false_neg_rate
+1-15 syllables,148,0.615,0.736,0.316,0.231,0.682,0.333,0.308
+16-30,345,0.542,0.757,0.323,0.176,0.762,0.335,0.155
+31-60,390,0.467,0.821,0.13,0.236,0.782,0.188,0.253
+61+,188,0.473,0.83,0.121,0.225,0.761,0.263,0.213

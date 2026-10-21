@@ -1,0 +1,320 @@
+[{"stream_name":"stdout","time":11.423641454,"data":"\n"}
+,{"stream_name":"stdout","time":11.423685288,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":11.423703916000001,"data":"# Step 1: Environment \u0026 Hardware Configuration\n"}
+,{"stream_name":"stdout","time":11.423708573,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":11.423712836,"data":"\n"}
+,{"stream_name":"stdout","time":11.678301618,"data":"Device               : cuda\n"}
+,{"stream_name":"stdout","time":11.724428629,"data":"GPU Name             : Tesla T4\n"}
+,{"stream_name":"stdout","time":11.724455433,"data":"GPU Memory (Total)   : 15.64 GB\n"}
+,{"stream_name":"stdout","time":11.724459898,"data":"\n"}
+,{"stream_name":"stdout","time":11.724463484,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":11.724467403,"data":"# Step 2: Dataset Loading \u0026 On-The-Fly Syllable Segmentation\n"}
+,{"stream_name":"stdout","time":11.724471289,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":11.724474643,"data":"\n"}
+,{"stream_name":"stdout","time":11.724478058999999,"data":"[Path Resolved] Data Directory  -\u003e /kaggle/input/datasets/theinkyawlwin/mypolar-assignment7\n"}
+,{"stream_name":"stdout","time":11.92820781,"data":"Loaded Raw Samples   : Train=8,054 | Val=1,007 | Test=1,007\n"}
+,{"stream_name":"stdout","time":11.928244190000001,"data":"[Syllable Tokenizer] Segmenting sentences into syllables via sylbreak regex...\n"}
+,{"stream_name":"stdout","time":12.390256264,"data":"[Syllable Tokenizer] Done in 0.46s!\n"}
+,{"stream_name":"stdout","time":12.390601137,"data":"\n"}
+,{"stream_name":"stdout","time":12.390611008,"data":"[Preview] Raw Text     : မြန်မာ့ တပ်မတော် က ရခိုင်ပြည်နယ် တွင်း မှာ ထကြွသောင်းကျန်းနေ တဲ့ အေအေဆ...\n"}
+,{"stream_name":"stdout","time":12.390618278,"data":"[Preview] Syllable Text: မြန် မာ့ တပ် မ တော် က ရ ခိုင် ပြည် နယ် တွင်း မှာ ထ ကြွ သောင်း ကျန်း နေ...\n"}
+,{"stream_name":"stdout","time":12.390622738,"data":"\n"}
+,{"stream_name":"stdout","time":12.390626018,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":12.390631107,"data":"# Step 3: Building Bounded Syllable Vocabulary\n"}
+,{"stream_name":"stdout","time":12.390634616,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":12.390639766,"data":"\n"}
+,{"stream_name":"stdout","time":12.454082983,"data":"Built Syllable Vocabulary: 2,886 total tokens (min_freq=1)\n"}
+,{"stream_name":"stdout","time":12.457064192,"data":"[Saved] Syllable Vocabulary mapping to: /kaggle/working/vocab_syllable.json\n"}
+,{"stream_name":"stdout","time":12.472655859,"data":"\n"}
+,{"stream_name":"stdout","time":12.472674374,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":12.472679989,"data":"# Step 4: Model Initialization (Syllable Bi-LSTM + Attention)\n"}
+,{"stream_name":"stdout","time":12.472684538,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":12.47268892,"data":"\n"}
+,{"stream_name":"stdout","time":12.914274021,"data":"Model Architecture   : MultiTaskBiLSTMAttention (Syllable-Level)\n"}
+,{"stream_name":"stdout","time":12.914320176,"data":"Vocab Size           : 2,886 syllables\n"}
+,{"stream_name":"stdout","time":12.91432663,"data":"Embedding Dim        : 256\n"}
+,{"stream_name":"stdout","time":12.914331165,"data":"Bi-LSTM Hidden Dim   : 128 (Bidirectional = 256)\n"}
+,{"stream_name":"stdout","time":12.914335912,"data":"Bi-LSTM Num Layers   : 2\n"}
+,{"stream_name":"stdout","time":12.914340423,"data":"Max Sequence Length  : 140 syllables\n"}
+,{"stream_name":"stdout","time":12.914344643,"data":"Total Trainable Params: 1,697,292 (vs 10.1M in Word-level)\n"}
+,{"stream_name":"stdout","time":18.549145247,"data":"\n"}
+,{"stream_name":"stdout","time":18.549193114,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":18.549199849,"data":"# Step 5: Training Loop (Multi-Task Learning with Early Stopping)\n"}
+,{"stream_name":"stdout","time":18.549205491,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":18.549210175,"data":"\n"}
+,{"stream_name":"stdout","time":20.732216632,"data":"Epoch [1/15] | Step [50/252] | Step Loss: 2.3757\n"}
+,{"stream_name":"stdout","time":21.497321812,"data":"Epoch [1/15] | Step [100/252] | Step Loss: 2.5748\n"}
+,{"stream_name":"stdout","time":22.2388881,"data":"Epoch [1/15] | Step [150/252] | Step Loss: 2.5972\n"}
+,{"stream_name":"stdout","time":22.979843246,"data":"Epoch [1/15] | Step [200/252] | Step Loss: 2.3855\n"}
+,{"stream_name":"stdout","time":23.722176952,"data":"Epoch [1/15] | Step [250/252] | Step Loss: 2.4168\n"}
+,{"stream_name":"stdout","time":23.751387635,"data":"Epoch [1/15] | Step [252/252] | Step Loss: 2.0139\n"}
+,{"stream_name":"stdout","time":24.086283915,"data":"\n"}
+,{"stream_name":"stdout","time":24.086314382,"data":"--- Epoch 1 Validation Summary (5.5s) ---\n"}
+,{"stream_name":"stdout","time":24.086319976,"data":"  Train Loss          : 2.6030\n"}
+,{"stream_name":"stdout","time":24.08632436,"data":"  Val Loss            : 2.3687\n"}
+,{"stream_name":"stdout","time":24.086327931,"data":"  Overall Macro F1    : 52.33%\n"}
+,{"stream_name":"stdout","time":24.086331958,"data":"  Task 1 (Pol) F1/Acc : 72.61% / 72.99%\n"}
+,{"stream_name":"stdout","time":24.086335704,"data":"  Task 2 (Type) F1    : Macro=44.06% | Micro=46.80%\n"}
+,{"stream_name":"stdout","time":24.086339306,"data":"  Task 3 (Manif) F1   : Macro=40.33% | Micro=41.73%\n"}
+,{"stream_name":"stdout","time":24.086343011,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 52.33%\n"}
+,{"stream_name":"stdout","time":24.856559759,"data":"Epoch [2/15] | Step [50/252] | Step Loss: 2.2429\n"}
+,{"stream_name":"stdout","time":25.60187031,"data":"Epoch [2/15] | Step [100/252] | Step Loss: 2.2955\n"}
+,{"stream_name":"stdout","time":26.351223619,"data":"Epoch [2/15] | Step [150/252] | Step Loss: 2.3516\n"}
+,{"stream_name":"stdout","time":27.091747963,"data":"Epoch [2/15] | Step [200/252] | Step Loss: 2.4226\n"}
+,{"stream_name":"stdout","time":27.835758796,"data":"Epoch [2/15] | Step [250/252] | Step Loss: 1.9971\n"}
+,{"stream_name":"stdout","time":27.863673754,"data":"Epoch [2/15] | Step [252/252] | Step Loss: 2.4331\n"}
+,{"stream_name":"stdout","time":28.141329211,"data":"\n"}
+,{"stream_name":"stdout","time":28.141358051,"data":"--- Epoch 2 Validation Summary (4.0s) ---\n"}
+,{"stream_name":"stdout","time":28.141378541,"data":"  Train Loss          : 2.2434\n"}
+,{"stream_name":"stdout","time":28.14139928,"data":"  Val Loss            : 2.3663\n"}
+,{"stream_name":"stdout","time":28.141403281,"data":"  Overall Macro F1    : 55.34%\n"}
+,{"stream_name":"stdout","time":28.141467603,"data":"  Task 1 (Pol) F1/Acc : 71.84% / 71.90%\n"}
+,{"stream_name":"stdout","time":28.141470852,"data":"  Task 2 (Type) F1    : Macro=50.28% | Micro=52.33%\n"}
+,{"stream_name":"stdout","time":28.141473329,"data":"  Task 3 (Manif) F1   : Macro=43.89% | Micro=45.36%\n"}
+,{"stream_name":"stdout","time":28.141476349,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 55.34%\n"}
+,{"stream_name":"stdout","time":28.896181558,"data":"Epoch [3/15] | Step [50/252] | Step Loss: 1.9289\n"}
+,{"stream_name":"stdout","time":29.656927591,"data":"Epoch [3/15] | Step [100/252] | Step Loss: 1.9747\n"}
+,{"stream_name":"stdout","time":30.413319364,"data":"Epoch [3/15] | Step [150/252] | Step Loss: 2.0540\n"}
+,{"stream_name":"stdout","time":31.163145812,"data":"Epoch [3/15] | Step [200/252] | Step Loss: 1.7069\n"}
+,{"stream_name":"stdout","time":31.92770059,"data":"Epoch [3/15] | Step [250/252] | Step Loss: 1.8350\n"}
+,{"stream_name":"stdout","time":31.955523317,"data":"Epoch [3/15] | Step [252/252] | Step Loss: 2.2431\n"}
+,{"stream_name":"stdout","time":32.23811754,"data":"\n"}
+,{"stream_name":"stdout","time":32.238155215,"data":"--- Epoch 3 Validation Summary (4.1s) ---\n"}
+,{"stream_name":"stdout","time":32.2381596,"data":"  Train Loss          : 2.0596\n"}
+,{"stream_name":"stdout","time":32.238186204,"data":"  Val Loss            : 2.2895\n"}
+,{"stream_name":"stdout","time":32.238191147,"data":"  Overall Macro F1    : 57.28%\n"}
+,{"stream_name":"stdout","time":32.238195724,"data":"  Task 1 (Pol) F1/Acc : 75.17% / 75.17%\n"}
+,{"stream_name":"stdout","time":32.238199984,"data":"  Task 2 (Type) F1    : Macro=51.99% | Micro=53.58%\n"}
+,{"stream_name":"stdout","time":32.238204271,"data":"  Task 3 (Manif) F1   : Macro=44.68% | Micro=46.29%\n"}
+,{"stream_name":"stdout","time":32.23820873,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 57.28%\n"}
+,{"stream_name":"stdout","time":33.004570698,"data":"Epoch [4/15] | Step [50/252] | Step Loss: 1.5213\n"}
+,{"stream_name":"stdout","time":33.767181562,"data":"Epoch [4/15] | Step [100/252] | Step Loss: 1.5674\n"}
+,{"stream_name":"stdout","time":34.52649312,"data":"Epoch [4/15] | Step [150/252] | Step Loss: 1.8239\n"}
+,{"stream_name":"stdout","time":35.282917901,"data":"Epoch [4/15] | Step [200/252] | Step Loss: 2.0416\n"}
+,{"stream_name":"stdout","time":36.035365052,"data":"Epoch [4/15] | Step [250/252] | Step Loss: 2.0767\n"}
+,{"stream_name":"stdout","time":36.063548033000004,"data":"Epoch [4/15] | Step [252/252] | Step Loss: 1.7259\n"}
+,{"stream_name":"stdout","time":36.342748246,"data":"\n"}
+,{"stream_name":"stdout","time":36.342801774,"data":"--- Epoch 4 Validation Summary (4.1s) ---\n"}
+,{"stream_name":"stdout","time":36.342808195,"data":"  Train Loss          : 1.9047\n"}
+,{"stream_name":"stdout","time":36.342812579,"data":"  Val Loss            : 2.2188\n"}
+,{"stream_name":"stdout","time":36.342816793,"data":"  Overall Macro F1    : 59.63%\n"}
+,{"stream_name":"stdout","time":36.342821103,"data":"  Task 1 (Pol) F1/Acc : 75.92% / 75.97%\n"}
+,{"stream_name":"stdout","time":36.342845922,"data":"  Task 2 (Type) F1    : Macro=57.34% | Micro=57.90%\n"}
+,{"stream_name":"stdout","time":36.342849739,"data":"  Task 3 (Manif) F1   : Macro=45.64% | Micro=47.32%\n"}
+,{"stream_name":"stdout","time":36.342853492,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 59.63%\n"}
+,{"stream_name":"stdout","time":37.108409747,"data":"Epoch [5/15] | Step [50/252] | Step Loss: 1.8483\n"}
+,{"stream_name":"stdout","time":37.868752099,"data":"Epoch [5/15] | Step [100/252] | Step Loss: 1.8825\n"}
+,{"stream_name":"stdout","time":38.621173681,"data":"Epoch [5/15] | Step [150/252] | Step Loss: 1.5898\n"}
+,{"stream_name":"stdout","time":39.382426193,"data":"Epoch [5/15] | Step [200/252] | Step Loss: 2.3816\n"}
+,{"stream_name":"stdout","time":40.141904694,"data":"Epoch [5/15] | Step [250/252] | Step Loss: 1.9080\n"}
+,{"stream_name":"stdout","time":40.169841811,"data":"Epoch [5/15] | Step [252/252] | Step Loss: 2.0405\n"}
+,{"stream_name":"stdout","time":40.456005288,"data":"\n"}
+,{"stream_name":"stdout","time":40.456046215,"data":"--- Epoch 5 Validation Summary (4.1s) ---\n"}
+,{"stream_name":"stdout","time":40.456052294,"data":"  Train Loss          : 1.7803\n"}
+,{"stream_name":"stdout","time":40.456056846,"data":"  Val Loss            : 2.2743\n"}
+,{"stream_name":"stdout","time":40.456061048,"data":"  Overall Macro F1    : 59.90%\n"}
+,{"stream_name":"stdout","time":40.456065349,"data":"  Task 1 (Pol) F1/Acc : 75.76% / 75.77%\n"}
+,{"stream_name":"stdout","time":40.456069216,"data":"  Task 2 (Type) F1    : Macro=58.01% | Micro=58.68%\n"}
+,{"stream_name":"stdout","time":40.456073364,"data":"  Task 3 (Manif) F1   : Macro=45.91% | Micro=47.57%\n"}
+,{"stream_name":"stdout","time":40.45607769,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 59.90%\n"}
+,{"stream_name":"stdout","time":41.223946475,"data":"Epoch [6/15] | Step [50/252] | Step Loss: 1.7045\n"}
+,{"stream_name":"stdout","time":41.997580873,"data":"Epoch [6/15] | Step [100/252] | Step Loss: 1.4416\n"}
+,{"stream_name":"stdout","time":42.765288358,"data":"Epoch [6/15] | Step [150/252] | Step Loss: 1.1922\n"}
+,{"stream_name":"stdout","time":43.52607249,"data":"Epoch [6/15] | Step [200/252] | Step Loss: 1.4620\n"}
+,{"stream_name":"stdout","time":44.286898949,"data":"Epoch [6/15] | Step [250/252] | Step Loss: 1.9802\n"}
+,{"stream_name":"stdout","time":44.315835095,"data":"Epoch [6/15] | Step [252/252] | Step Loss: 1.4419\n"}
+,{"stream_name":"stdout","time":44.604482512,"data":"\n"}
+,{"stream_name":"stdout","time":44.604517786,"data":"--- Epoch 6 Validation Summary (4.1s) ---\n"}
+,{"stream_name":"stdout","time":44.604522442,"data":"  Train Loss          : 1.6267\n"}
+,{"stream_name":"stdout","time":44.604527854,"data":"  Val Loss            : 2.4137\n"}
+,{"stream_name":"stdout","time":44.604536263,"data":"  Overall Macro F1    : 60.51%\n"}
+,{"stream_name":"stdout","time":44.604538964,"data":"  Task 1 (Pol) F1/Acc : 76.16% / 76.17%\n"}
+,{"stream_name":"stdout","time":44.60454153,"data":"  Task 2 (Type) F1    : Macro=58.53% | Micro=58.33%\n"}
+,{"stream_name":"stdout","time":44.604544162,"data":"  Task 3 (Manif) F1   : Macro=46.83% | Micro=48.51%\n"}
+,{"stream_name":"stdout","time":44.60454658,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 60.51%\n"}
+,{"stream_name":"stdout","time":45.377884687,"data":"Epoch [7/15] | Step [50/252] | Step Loss: 1.5120\n"}
+,{"stream_name":"stdout","time":46.142118311,"data":"Epoch [7/15] | Step [100/252] | Step Loss: 1.6543\n"}
+,{"stream_name":"stdout","time":46.916720854,"data":"Epoch [7/15] | Step [150/252] | Step Loss: 1.4299\n"}
+,{"stream_name":"stdout","time":47.682455101,"data":"Epoch [7/15] | Step [200/252] | Step Loss: 1.4931\n"}
+,{"stream_name":"stdout","time":48.445941409,"data":"Epoch [7/15] | Step [250/252] | Step Loss: 1.6475\n"}
+,{"stream_name":"stdout","time":48.474177352,"data":"Epoch [7/15] | Step [252/252] | Step Loss: 1.4077\n"}
+,{"stream_name":"stdout","time":48.759486803,"data":"\n"}
+,{"stream_name":"stdout","time":48.759555893,"data":"--- Epoch 7 Validation Summary (4.1s) ---\n"}
+,{"stream_name":"stdout","time":48.759561923,"data":"  Train Loss          : 1.5265\n"}
+,{"stream_name":"stdout","time":48.759565724,"data":"  Val Loss            : 2.3310\n"}
+,{"stream_name":"stdout","time":48.75956927,"data":"  Overall Macro F1    : 60.27%\n"}
+,{"stream_name":"stdout","time":48.759572753,"data":"  Task 1 (Pol) F1/Acc : 76.08% / 76.27%\n"}
+,{"stream_name":"stdout","time":48.759576308,"data":"  Task 2 (Type) F1    : Macro=57.60% | Micro=58.87%\n"}
+,{"stream_name":"stdout","time":48.75957991,"data":"  Task 3 (Manif) F1   : Macro=47.13% | Micro=48.89%\n"}
+,{"stream_name":"stdout","time":48.759585235,"data":"  Patience: 1/5\n"}
+,{"stream_name":"stdout","time":49.523879675,"data":"Epoch [8/15] | Step [50/252] | Step Loss: 2.0705\n"}
+,{"stream_name":"stdout","time":50.291791578,"data":"Epoch [8/15] | Step [100/252] | Step Loss: 1.2030\n"}
+,{"stream_name":"stdout","time":51.058375817,"data":"Epoch [8/15] | Step [150/252] | Step Loss: 1.2868\n"}
+,{"stream_name":"stdout","time":51.848322476999996,"data":"Epoch [8/15] | Step [200/252] | Step Loss: 1.6294\n"}
+,{"stream_name":"stdout","time":52.620783848,"data":"Epoch [8/15] | Step [250/252] | Step Loss: 1.3443\n"}
+,{"stream_name":"stdout","time":52.649178727,"data":"Epoch [8/15] | Step [252/252] | Step Loss: 1.0304\n"}
+,{"stream_name":"stdout","time":52.92589911,"data":"\n"}
+,{"stream_name":"stdout","time":52.925948695,"data":"--- Epoch 8 Validation Summary (4.2s) ---\n"}
+,{"stream_name":"stdout","time":52.925954547,"data":"  Train Loss          : 1.4270\n"}
+,{"stream_name":"stdout","time":52.925958531,"data":"  Val Loss            : 2.5181\n"}
+,{"stream_name":"stdout","time":52.925962278,"data":"  Overall Macro F1    : 60.11%\n"}
+,{"stream_name":"stdout","time":52.925966357,"data":"  Task 1 (Pol) F1/Acc : 75.26% / 75.57%\n"}
+,{"stream_name":"stdout","time":52.925970234,"data":"  Task 2 (Type) F1    : Macro=58.29% | Micro=58.64%\n"}
+,{"stream_name":"stdout","time":52.925973748,"data":"  Task 3 (Manif) F1   : Macro=46.79% | Micro=48.43%\n"}
+,{"stream_name":"stdout","time":52.925977129,"data":"  Patience: 2/5\n"}
+,{"stream_name":"stdout","time":53.690745497,"data":"Epoch [9/15] | Step [50/252] | Step Loss: 1.6746\n"}
+,{"stream_name":"stdout","time":54.476735171,"data":"Epoch [9/15] | Step [100/252] | Step Loss: 1.1319\n"}
+,{"stream_name":"stdout","time":55.252385823,"data":"Epoch [9/15] | Step [150/252] | Step Loss: 1.3340\n"}
+,{"stream_name":"stdout","time":56.02381507,"data":"Epoch [9/15] | Step [200/252] | Step Loss: 1.2829\n"}
+,{"stream_name":"stdout","time":56.79947439,"data":"Epoch [9/15] | Step [250/252] | Step Loss: 1.4174\n"}
+,{"stream_name":"stdout","time":56.828528924,"data":"Epoch [9/15] | Step [252/252] | Step Loss: 1.2072\n"}
+,{"stream_name":"stdout","time":57.110454043,"data":"\n"}
+,{"stream_name":"stdout","time":57.110491796,"data":"--- Epoch 9 Validation Summary (4.2s) ---\n"}
+,{"stream_name":"stdout","time":57.110497402,"data":"  Train Loss          : 1.3367\n"}
+,{"stream_name":"stdout","time":57.1105015,"data":"  Val Loss            : 2.6512\n"}
+,{"stream_name":"stdout","time":57.110505646,"data":"  Overall Macro F1    : 61.44%\n"}
+,{"stream_name":"stdout","time":57.11051024,"data":"  Task 1 (Pol) F1/Acc : 76.12% / 76.17%\n"}
+,{"stream_name":"stdout","time":57.11051388,"data":"  Task 2 (Type) F1    : Macro=60.27% | Micro=61.42%\n"}
+,{"stream_name":"stdout","time":57.110518309,"data":"  Task 3 (Manif) F1   : Macro=47.94% | Micro=49.69%\n"}
+,{"stream_name":"stdout","time":57.110544107,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 61.44%\n"}
+,{"stream_name":"stdout","time":57.896556802,"data":"Epoch [10/15] | Step [50/252] | Step Loss: 1.1216\n"}
+,{"stream_name":"stdout","time":58.672742829,"data":"Epoch [10/15] | Step [100/252] | Step Loss: 1.0529\n"}
+,{"stream_name":"stdout","time":59.451005664,"data":"Epoch [10/15] | Step [150/252] | Step Loss: 1.1033\n"}
+,{"stream_name":"stdout","time":60.228993623,"data":"Epoch [10/15] | Step [200/252] | Step Loss: 1.3478\n"}
+,{"stream_name":"stdout","time":61.015318296,"data":"Epoch [10/15] | Step [250/252] | Step Loss: 1.0666\n"}
+,{"stream_name":"stdout","time":61.051493665,"data":"Epoch [10/15] | Step [252/252] | Step Loss: 1.1098\n"}
+,{"stream_name":"stdout","time":61.366477481,"data":"\n"}
+,{"stream_name":"stdout","time":61.366518924,"data":"--- Epoch 10 Validation Summary (4.2s) ---\n"}
+,{"stream_name":"stdout","time":61.366524551,"data":"  Train Loss          : 1.2688\n"}
+,{"stream_name":"stdout","time":61.366528765,"data":"  Val Loss            : 2.8443\n"}
+,{"stream_name":"stdout","time":61.366533075,"data":"  Overall Macro F1    : 60.85%\n"}
+,{"stream_name":"stdout","time":61.366536829,"data":"  Task 1 (Pol) F1/Acc : 75.95% / 75.97%\n"}
+,{"stream_name":"stdout","time":61.366540435,"data":"  Task 2 (Type) F1    : Macro=58.81% | Micro=60.01%\n"}
+,{"stream_name":"stdout","time":61.366544065,"data":"  Task 3 (Manif) F1   : Macro=47.80% | Micro=49.64%\n"}
+,{"stream_name":"stdout","time":61.366547678,"data":"  Patience: 1/5\n"}
+,{"stream_name":"stdout","time":62.142069417,"data":"Epoch [11/15] | Step [50/252] | Step Loss: 0.9741\n"}
+,{"stream_name":"stdout","time":62.929797601,"data":"Epoch [11/15] | Step [100/252] | Step Loss: 1.3689\n"}
+,{"stream_name":"stdout","time":63.717137836,"data":"Epoch [11/15] | Step [150/252] | Step Loss: 0.9776\n"}
+,{"stream_name":"stdout","time":64.512120212,"data":"Epoch [11/15] | Step [200/252] | Step Loss: 0.8941\n"}
+,{"stream_name":"stdout","time":65.296387129,"data":"Epoch [11/15] | Step [250/252] | Step Loss: 1.3676\n"}
+,{"stream_name":"stdout","time":65.325481488,"data":"Epoch [11/15] | Step [252/252] | Step Loss: 1.1732\n"}
+,{"stream_name":"stdout","time":65.61038411,"data":"\n"}
+,{"stream_name":"stdout","time":65.610418242,"data":"--- Epoch 11 Validation Summary (4.2s) ---\n"}
+,{"stream_name":"stdout","time":65.610428107,"data":"  Train Loss          : 1.2093\n"}
+,{"stream_name":"stdout","time":65.610431316,"data":"  Val Loss            : 2.7450\n"}
+,{"stream_name":"stdout","time":65.610433607,"data":"  Overall Macro F1    : 60.90%\n"}
+,{"stream_name":"stdout","time":65.610435973,"data":"  Task 1 (Pol) F1/Acc : 75.64% / 75.87%\n"}
+,{"stream_name":"stdout","time":65.610438204,"data":"  Task 2 (Type) F1    : Macro=59.18% | Micro=59.84%\n"}
+,{"stream_name":"stdout","time":65.610440634,"data":"  Task 3 (Manif) F1   : Macro=47.88% | Micro=49.74%\n"}
+,{"stream_name":"stdout","time":65.610443035,"data":"  Patience: 2/5\n"}
+,{"stream_name":"stdout","time":66.392064889,"data":"Epoch [12/15] | Step [50/252] | Step Loss: 0.9339\n"}
+,{"stream_name":"stdout","time":67.177078977,"data":"Epoch [12/15] | Step [100/252] | Step Loss: 1.6196\n"}
+,{"stream_name":"stdout","time":67.956905305,"data":"Epoch [12/15] | Step [150/252] | Step Loss: 1.1436\n"}
+,{"stream_name":"stdout","time":68.749339483,"data":"Epoch [12/15] | Step [200/252] | Step Loss: 1.8017\n"}
+,{"stream_name":"stdout","time":69.535313928,"data":"Epoch [12/15] | Step [250/252] | Step Loss: 1.2449\n"}
+,{"stream_name":"stdout","time":69.565018513,"data":"Epoch [12/15] | Step [252/252] | Step Loss: 1.1305\n"}
+,{"stream_name":"stdout","time":69.850396157,"data":"\n"}
+,{"stream_name":"stdout","time":69.850446983,"data":"--- Epoch 12 Validation Summary (4.2s) ---\n"}
+,{"stream_name":"stdout","time":69.850452886,"data":"  Train Loss          : 1.1437\n"}
+,{"stream_name":"stdout","time":69.850457345,"data":"  Val Loss            : 2.9039\n"}
+,{"stream_name":"stdout","time":69.850462325,"data":"  Overall Macro F1    : 61.22%\n"}
+,{"stream_name":"stdout","time":69.850466829,"data":"  Task 1 (Pol) F1/Acc : 75.52% / 75.57%\n"}
+,{"stream_name":"stdout","time":69.850470599,"data":"  Task 2 (Type) F1    : Macro=59.75% | Micro=60.40%\n"}
+,{"stream_name":"stdout","time":69.850474313,"data":"  Task 3 (Manif) F1   : Macro=48.39% | Micro=50.51%\n"}
+,{"stream_name":"stdout","time":69.850478003,"data":"  Patience: 3/5\n"}
+,{"stream_name":"stdout","time":70.639753998,"data":"Epoch [13/15] | Step [50/252] | Step Loss: 0.9213\n"}
+,{"stream_name":"stdout","time":71.442918867,"data":"Epoch [13/15] | Step [100/252] | Step Loss: 0.8820\n"}
+,{"stream_name":"stdout","time":72.231963502,"data":"Epoch [13/15] | Step [150/252] | Step Loss: 0.9618\n"}
+,{"stream_name":"stdout","time":73.022313492,"data":"Epoch [13/15] | Step [200/252] | Step Loss: 1.0950\n"}
+,{"stream_name":"stdout","time":73.814071985,"data":"Epoch [13/15] | Step [250/252] | Step Loss: 1.4222\n"}
+,{"stream_name":"stdout","time":73.845668254,"data":"Epoch [13/15] | Step [252/252] | Step Loss: 1.0776\n"}
+,{"stream_name":"stdout","time":74.135098743,"data":"\n"}
+,{"stream_name":"stdout","time":74.135134938,"data":"--- Epoch 13 Validation Summary (4.3s) ---\n"}
+,{"stream_name":"stdout","time":74.135140093,"data":"  Train Loss          : 1.0258\n"}
+,{"stream_name":"stdout","time":74.13514377,"data":"  Val Loss            : 2.9210\n"}
+,{"stream_name":"stdout","time":74.135151553,"data":"  Overall Macro F1    : 61.87%\n"}
+,{"stream_name":"stdout","time":74.135155051,"data":"  Task 1 (Pol) F1/Acc : 76.69% / 76.76%\n"}
+,{"stream_name":"stdout","time":74.135158659,"data":"  Task 2 (Type) F1    : Macro=60.18% | Micro=61.58%\n"}
+,{"stream_name":"stdout","time":74.135162553,"data":"  Task 3 (Manif) F1   : Macro=48.73% | Micro=50.87%\n"}
+,{"stream_name":"stdout","time":74.135166212,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 61.87%\n"}
+,{"stream_name":"stdout","time":74.943021248,"data":"Epoch [14/15] | Step [50/252] | Step Loss: 0.7581\n"}
+,{"stream_name":"stdout","time":75.738046028,"data":"Epoch [14/15] | Step [100/252] | Step Loss: 1.0161\n"}
+,{"stream_name":"stdout","time":76.532903525,"data":"Epoch [14/15] | Step [150/252] | Step Loss: 0.9369\n"}
+,{"stream_name":"stdout","time":77.329708836,"data":"Epoch [14/15] | Step [200/252] | Step Loss: 0.8006\n"}
+,{"stream_name":"stdout","time":78.128518351,"data":"Epoch [14/15] | Step [250/252] | Step Loss: 0.9353\n"}
+,{"stream_name":"stdout","time":78.157949933,"data":"Epoch [14/15] | Step [252/252] | Step Loss: 1.0015\n"}
+,{"stream_name":"stdout","time":78.44419678,"data":"\n"}
+,{"stream_name":"stdout","time":78.444233341,"data":"--- Epoch 14 Validation Summary (4.3s) ---\n"}
+,{"stream_name":"stdout","time":78.444240076,"data":"  Train Loss          : 0.9582\n"}
+,{"stream_name":"stdout","time":78.444244625,"data":"  Val Loss            : 3.2512\n"}
+,{"stream_name":"stdout","time":78.44424893,"data":"  Overall Macro F1    : 62.46%\n"}
+,{"stream_name":"stdout","time":78.444253298,"data":"  Task 1 (Pol) F1/Acc : 76.75% / 76.76%\n"}
+,{"stream_name":"stdout","time":78.44426209,"data":"  Task 2 (Type) F1    : Macro=61.73% | Micro=62.35%\n"}
+,{"stream_name":"stdout","time":78.444279518,"data":"  Task 3 (Manif) F1   : Macro=48.91% | Micro=51.10%\n"}
+,{"stream_name":"stdout","time":78.444282079,"data":"  \u003e\u003e\u003e [SAVING BEST CHECKPOINT] New highest Overall Macro F1: 62.46%\n"}
+,{"stream_name":"stdout","time":79.247482262,"data":"Epoch [15/15] | Step [50/252] | Step Loss: 0.8700\n"}
+,{"stream_name":"stdout","time":80.052364037,"data":"Epoch [15/15] | Step [100/252] | Step Loss: 0.9092\n"}
+,{"stream_name":"stdout","time":80.856141213,"data":"Epoch [15/15] | Step [150/252] | Step Loss: 0.9508\n"}
+,{"stream_name":"stdout","time":81.678329425,"data":"Epoch [15/15] | Step [200/252] | Step Loss: 0.6902\n"}
+,{"stream_name":"stdout","time":82.474210258,"data":"Epoch [15/15] | Step [250/252] | Step Loss: 0.9765\n"}
+,{"stream_name":"stdout","time":82.504168138,"data":"Epoch [15/15] | Step [252/252] | Step Loss: 1.1052\n"}
+,{"stream_name":"stdout","time":82.788061162,"data":"\n"}
+,{"stream_name":"stdout","time":82.788102426,"data":"--- Epoch 15 Validation Summary (4.3s) ---\n"}
+,{"stream_name":"stdout","time":82.788109341,"data":"  Train Loss          : 0.9208\n"}
+,{"stream_name":"stdout","time":82.788114562,"data":"  Val Loss            : 3.2646\n"}
+,{"stream_name":"stdout","time":82.788118738,"data":"  Overall Macro F1    : 62.17%\n"}
+,{"stream_name":"stdout","time":82.788122544,"data":"  Task 1 (Pol) F1/Acc : 76.23% / 76.46%\n"}
+,{"stream_name":"stdout","time":82.788127058,"data":"  Task 2 (Type) F1    : Macro=61.02% | Micro=60.76%\n"}
+,{"stream_name":"stdout","time":82.788130936,"data":"  Task 3 (Manif) F1   : Macro=49.27% | Micro=51.37%\n"}
+,{"stream_name":"stdout","time":82.788134577,"data":"  Patience: 1/5\n"}
+,{"stream_name":"stdout","time":82.788138106,"data":"\n"}
+,{"stream_name":"stdout","time":82.788141526,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":82.788145241,"data":"# Step 6: Blind Test Set Evaluation on Best Checkpoint (Syllable Bi-LSTM)\n"}
+,{"stream_name":"stdout","time":82.788148941,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":82.788152742,"data":"\n"}
+,{"stream_name":"stdout","time":82.788164957,"data":"Loading best checkpoint from: /kaggle/working/best_bilstm_syllable_multitask.pt\n"}
+,{"stream_name":"stdout","time":83.07784485,"data":"\n"}
+,{"stream_name":"stdout","time":83.077884293,"data":"===========================================================================\n"}
+,{"stream_name":"stdout","time":83.07788805,"data":"FINAL BENCHMARK TEST SET EVALUATION REPORT (Syllable Bi-LSTM)\n"}
+,{"stream_name":"stdout","time":83.077890577,"data":"===========================================================================\n"}
+,{"stream_name":"stdout","time":83.077893014,"data":"Overall Composite Macro F1 : 59.93%\n"}
+,{"stream_name":"stdout","time":83.077895373,"data":"\n"}
+,{"stream_name":"stdout","time":83.077897503,"data":"[Task 1: Polarization Detection]\n"}
+,{"stream_name":"stdout","time":83.077899737,"data":"  Macro F1 : 73.36%\n"}
+,{"stream_name":"stdout","time":83.077901922,"data":"  Accuracy : 73.39%\n"}
+,{"stream_name":"stdout","time":83.077909552,"data":"\n"}
+,{"stream_name":"stdout","time":83.077923969,"data":"[Task 2: Target Type Classification]\n"}
+,{"stream_name":"stdout","time":83.077927982,"data":"  Macro F1 : 60.35%\n"}
+,{"stream_name":"stdout","time":83.07793166,"data":"  Micro F1 : 61.01%\n"}
+,{"stream_name":"stdout","time":83.079977121,"data":"    - political      : F1 = 69.88%\n"}
+,{"stream_name":"stdout","time":83.082446919,"data":"    - racial/ethnic  : F1 = 56.62%\n"}
+,{"stream_name":"stdout","time":83.084462022,"data":"    - religious      : F1 = 70.72%\n"}
+,{"stream_name":"stdout","time":83.086757436,"data":"    - gender/sexual  : F1 = 52.51%\n"}
+,{"stream_name":"stdout","time":83.088930759,"data":"    - other          : F1 = 52.01%\n"}
+,{"stream_name":"stdout","time":83.088943855,"data":"\n"}
+,{"stream_name":"stdout","time":83.088951818,"data":"[Task 3: Manifestation Identification]\n"}
+,{"stream_name":"stdout","time":83.088954694,"data":"  Macro F1 : 46.08%\n"}
+,{"stream_name":"stdout","time":83.088957269,"data":"  Micro F1 : 47.69%\n"}
+,{"stream_name":"stdout","time":83.091448809,"data":"    - stereotype       : F1 = 37.16%\n"}
+,{"stream_name":"stdout","time":83.093591151,"data":"    - vilification     : F1 = 61.26%\n"}
+,{"stream_name":"stdout","time":83.095732915,"data":"    - dehumanization   : F1 = 50.93%\n"}
+,{"stream_name":"stdout","time":83.097753409,"data":"    - extreme_language : F1 = 49.22%\n"}
+,{"stream_name":"stdout","time":83.10005112,"data":"    - lack_of_empathy  : F1 = 36.99%\n"}
+,{"stream_name":"stdout","time":83.102265841,"data":"    - invalidation     : F1 = 40.91%\n"}
+,{"stream_name":"stdout","time":83.102282734,"data":"===========================================================================\n"}
+,{"stream_name":"stdout","time":83.102287368,"data":"\n"}
+,{"stream_name":"stdout","time":83.102294366,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":83.102296929,"data":"# Step 7: Persisting Artifacts \u0026 Export\n"}
+,{"stream_name":"stdout","time":83.102299826,"data":"###########################################################################\n"}
+,{"stream_name":"stdout","time":83.102302379,"data":"\n"}
+,{"stream_name":"stdout","time":83.150073893,"data":"[Saved] Test predictions: /kaggle/working/test_predictions_multitask_bilstm_syllable.csv\n"}
+,{"stream_name":"stdout","time":83.150532285,"data":"[Saved] Evaluation summary JSON: /kaggle/working/test_evaluation_summary_bilstm_syllable.json\n"}
+,{"stream_name":"stdout","time":83.15054601,"data":"\n"}
+,{"stream_name":"stdout","time":83.150550065,"data":"[DONE] Full Syllable Bi-LSTM pipeline executed successfully in 1.20 minutes.\n"}
+,{"stream_name":"stderr","time":88.685214397,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":88.685245165,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":88.985538021,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":88.985570051,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":89.801226017,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":90.925529074,"data":"[NbConvertApp] Writing 392241 bytes to __results__.html\n"}
+]

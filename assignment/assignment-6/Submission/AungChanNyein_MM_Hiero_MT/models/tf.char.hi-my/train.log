@@ -1,0 +1,812 @@
+[2026-10-10 14:01:21] [marian] Marian v1.12.43 c9f287d 2025-06-23 19:47:45 +0000
+[2026-10-10 14:01:21] [marian] Running on 4e285bbbaf8e as process 1 with command line:
+[2026-10-10 14:01:21] [marian] marian --model models/tf.char.hi-my/model.npz --train-sets data/train.hic data/train.my --valid-sets data/valid.hic data/valid.my --vocabs data/vocab.hic.yml data/vocab.my.yml --valid-translation-output models/tf.char.hi-my/valid.output --log models/tf.char.hi-my/train.log --valid-log models/tf.char.hi-my/valid.log --valid-freq 400 --save-freq 400 --disp-freq 100 --after 60e --cpu-threads 1 --max-length 100 --valid-metrics bleu ce-mean-words perplexity --early-stopping 8 --keep-best --beam-size 4 --normalize 0.6 --valid-mini-batch 32 --quiet-translation --overwrite --seed 1111 --type transformer --dim-emb 256 --transformer-dim-ffn 1024 --enc-depth 2 --dec-depth 2 --transformer-heads 4 --transformer-dropout 0.1 --label-smoothing 0.1 --tied-embeddings --mini-batch 64 --learn-rate 0.0005 --lr-warmup 400 --lr-decay-inv-sqrt 400 --clip-norm 5
+[2026-10-10 14:01:21] [config] after: 60e
+[2026-10-10 14:01:21] [config] after-batches: 0
+[2026-10-10 14:01:21] [config] after-epochs: 0
+[2026-10-10 14:01:21] [config] all-caps-every: 0
+[2026-10-10 14:01:21] [config] allow-unk: false
+[2026-10-10 14:01:21] [config] authors: false
+[2026-10-10 14:01:21] [config] beam-size: 4
+[2026-10-10 14:01:21] [config] bert-class-symbol: "[CLS]"
+[2026-10-10 14:01:21] [config] bert-mask-symbol: "[MASK]"
+[2026-10-10 14:01:21] [config] bert-masking-fraction: 0.15
+[2026-10-10 14:01:21] [config] bert-sep-symbol: "[SEP]"
+[2026-10-10 14:01:21] [config] bert-train-type-embeddings: true
+[2026-10-10 14:01:21] [config] bert-type-vocab-size: 2
+[2026-10-10 14:01:21] [config] build-info: ""
+[2026-10-10 14:01:21] [config] check-gradient-nan: false
+[2026-10-10 14:01:21] [config] check-nan: false
+[2026-10-10 14:01:21] [config] cite: false
+[2026-10-10 14:01:21] [config] clip-norm: 5
+[2026-10-10 14:01:21] [config] comet-augment-bad: 0
+[2026-10-10 14:01:21] [config] comet-dropout: 0.1
+[2026-10-10 14:01:21] [config] comet-final-sigmoid: false
+[2026-10-10 14:01:21] [config] comet-mix: false
+[2026-10-10 14:01:21] [config] comet-mix-norm: false
+[2026-10-10 14:01:21] [config] comet-mix-transformation: softmax
+[2026-10-10 14:01:21] [config] comet-mixup: 0
+[2026-10-10 14:01:21] [config] comet-mixup-reg: false
+[2026-10-10 14:01:21] [config] comet-pool: avg
+[2026-10-10 14:01:21] [config] comet-pooler-ffn:
+[2026-10-10 14:01:21] [config]   - 2048
+[2026-10-10 14:01:21] [config]   - 1024
+[2026-10-10 14:01:21] [config] comet-prepend-zero: false
+[2026-10-10 14:01:21] [config] comet-stop-grad: false
+[2026-10-10 14:01:21] [config] comet-use-separator: false
+[2026-10-10 14:01:21] [config] cost-scaling:
+[2026-10-10 14:01:21] [config]   []
+[2026-10-10 14:01:21] [config] cost-type: ce-sum
+[2026-10-10 14:01:21] [config] cpu-threads: 1
+[2026-10-10 14:01:21] [config] custom-fallbacks:
+[2026-10-10 14:01:21] [config]   []
+[2026-10-10 14:01:21] [config] data-threads: 8
+[2026-10-10 14:01:21] [config] data-weighting: ""
+[2026-10-10 14:01:21] [config] data-weighting-type: sentence
+[2026-10-10 14:01:21] [config] dec-cell: gru
+[2026-10-10 14:01:21] [config] dec-cell-base-depth: 2
+[2026-10-10 14:01:21] [config] dec-cell-high-depth: 1
+[2026-10-10 14:01:21] [config] dec-depth: 2
+[2026-10-10 14:01:21] [config] devices:
+[2026-10-10 14:01:21] [config]   - 0
+[2026-10-10 14:01:21] [config] dim-emb: 256
+[2026-10-10 14:01:21] [config] dim-rnn: 1024
+[2026-10-10 14:01:21] [config] dim-vocabs:
+[2026-10-10 14:01:21] [config]   - 0
+[2026-10-10 14:01:21] [config]   - 0
+[2026-10-10 14:01:21] [config] disp-first: 0
+[2026-10-10 14:01:21] [config] disp-freq: 100
+[2026-10-10 14:01:21] [config] disp-label-counts: true
+[2026-10-10 14:01:21] [config] dropout-rnn: 0
+[2026-10-10 14:01:21] [config] dropout-src: 0
+[2026-10-10 14:01:21] [config] dropout-trg: 0
+[2026-10-10 14:01:21] [config] dump-config: ""
+[2026-10-10 14:01:21] [config] dynamic-gradient-scaling:
+[2026-10-10 14:01:21] [config]   []
+[2026-10-10 14:01:21] [config] early-stopping: 8
+[2026-10-10 14:01:21] [config] early-stopping-epsilon:
+[2026-10-10 14:01:21] [config]   - 0
+[2026-10-10 14:01:21] [config] early-stopping-on: first
+[2026-10-10 14:01:21] [config] embedding-fix-src: false
+[2026-10-10 14:01:21] [config] embedding-fix-trg: false
+[2026-10-10 14:01:21] [config] embedding-normalization: false
+[2026-10-10 14:01:21] [config] embedding-vectors:
+[2026-10-10 14:01:21] [config]   []
+[2026-10-10 14:01:21] [config] enc-cell: gru
+[2026-10-10 14:01:21] [config] enc-cell-depth: 1
+[2026-10-10 14:01:21] [config] enc-depth: 2
+[2026-10-10 14:01:21] [config] enc-type: bidirectional
+[2026-10-10 14:01:21] [config] english-title-case-every: 0
+[2026-10-10 14:01:21] [config] exponential-smoothing: 0
+[2026-10-10 14:01:21] [config] exponential-smoothing-replace-freq: 0
+[2026-10-10 14:01:21] [config] factor-weight: 1
+[2026-10-10 14:01:21] [config] factors-combine: sum
+[2026-10-10 14:01:21] [config] factors-dim-emb: 0
+[2026-10-10 14:01:21] [config] gradient-checkpointing: false
+[2026-10-10 14:01:21] [config] gradient-norm-average-window: 100
+[2026-10-10 14:01:21] [config] guided-alignment: none
+[2026-10-10 14:01:21] [config] guided-alignment-cost: ce
+[2026-10-10 14:01:21] [config] guided-alignment-weight: 0.1
+[2026-10-10 14:01:21] [config] ignore-model-config: false
+[2026-10-10 14:01:21] [config] input-join-fields: false
+[2026-10-10 14:01:21] [config] input-reorder:
+[2026-10-10 14:01:21] [config]   []
+[2026-10-10 14:01:21] [config] input-types:
+[2026-10-10 14:01:21] [config]   []
+[2026-10-10 14:01:21] [config] interpolate-env-vars: false
+[2026-10-10 14:01:21] [config] keep-best: true
+[2026-10-10 14:01:21] [config] label-smoothing: 0.1
+[2026-10-10 14:01:21] [config] layer-normalization: false
+[2026-10-10 14:01:21] [config] learn-rate: 0.0005
+[2026-10-10 14:01:21] [config] lemma-dependency: ""
+[2026-10-10 14:01:21] [config] lemma-dim-emb: 0
+[2026-10-10 14:01:21] [config] log: models/tf.char.hi-my/train.log
+[2026-10-10 14:01:21] [config] log-level: info
+[2026-10-10 14:01:21] [config] log-time-zone: ""
+[2026-10-10 14:01:21] [config] logical-epoch:
+[2026-10-10 14:01:21] [config]   - 1e
+[2026-10-10 14:01:21] [config]   - 0
+[2026-10-10 14:01:21] [config] lr-decay: 0
+[2026-10-10 14:01:21] [config] lr-decay-freq: 50000
+[2026-10-10 14:01:21] [config] lr-decay-inv-sqrt:
+[2026-10-10 14:01:21] [config]   - 400
+[2026-10-10 14:01:21] [config] lr-decay-repeat-warmup: false
+[2026-10-10 14:01:21] [config] lr-decay-reset-optimizer: false
+[2026-10-10 14:01:21] [config] lr-decay-start:
+[2026-10-10 14:01:21] [config]   - 10
+[2026-10-10 14:01:21] [config]   - 1
+[2026-10-10 14:01:21] [config] lr-decay-strategy: epoch+stalled
+[2026-10-10 14:01:21] [config] lr-report: false
+[2026-10-10 14:01:21] [config] lr-warmup: 400
+[2026-10-10 14:01:21] [config] lr-warmup-at-reload: false
+[2026-10-10 14:01:21] [config] lr-warmup-cycle: false
+[2026-10-10 14:01:21] [config] lr-warmup-start-rate: 0
+[2026-10-10 14:01:21] [config] max-length: 100
+[2026-10-10 14:01:21] [config] max-length-crop: false
+[2026-10-10 14:01:21] [config] max-length-factor: 3
+[2026-10-10 14:01:21] [config] maxi-batch: 100
+[2026-10-10 14:01:21] [config] maxi-batch-sort: trg
+[2026-10-10 14:01:21] [config] mini-batch: 64
+[2026-10-10 14:01:21] [config] mini-batch-fit: false
+[2026-10-10 14:01:21] [config] mini-batch-fit-step: 10
+[2026-10-10 14:01:21] [config] mini-batch-round-up: true
+[2026-10-10 14:01:21] [config] mini-batch-track-lr: false
+[2026-10-10 14:01:21] [config] mini-batch-warmup: 0
+[2026-10-10 14:01:21] [config] mini-batch-words: 0
+[2026-10-10 14:01:21] [config] mini-batch-words-ref: 0
+[2026-10-10 14:01:21] [config] model: models/tf.char.hi-my/model.npz
+[2026-10-10 14:01:21] [config] multi-loss-type: sum
+[2026-10-10 14:01:21] [config] n-best: false
+[2026-10-10 14:01:21] [config] no-optimizer-reload: false
+[2026-10-10 14:01:21] [config] no-reload: false
+[2026-10-10 14:01:21] [config] no-restore-corpus: false
+[2026-10-10 14:01:21] [config] no-spm-encode: false
+[2026-10-10 14:01:21] [config] normalize: 0.6
+[2026-10-10 14:01:21] [config] normalize-gradient: false
+[2026-10-10 14:01:21] [config] normalize-gradient-by-ratio: false
+[2026-10-10 14:01:21] [config] optimizer: adam
+[2026-10-10 14:01:21] [config] optimizer-delay: 1
+[2026-10-10 14:01:21] [config] optimizer-params:
+[2026-10-10 14:01:21] [config]   []
+[2026-10-10 14:01:21] [config] output-omit-bias: false
+[2026-10-10 14:01:21] [config] overwrite: true
+[2026-10-10 14:01:21] [config] overwrite-checkpoint: true
+[2026-10-10 14:01:21] [config] precision:
+[2026-10-10 14:01:21] [config]   - float32
+[2026-10-10 14:01:21] [config]   - float32
+[2026-10-10 14:01:21] [config] pretrained-model: ""
+[2026-10-10 14:01:21] [config] quantize-biases: false
+[2026-10-10 14:01:21] [config] quantize-bits: 0
+[2026-10-10 14:01:21] [config] quantize-log-based: false
+[2026-10-10 14:01:21] [config] quantize-optimization-steps: 0
+[2026-10-10 14:01:21] [config] quiet: false
+[2026-10-10 14:01:21] [config] quiet-translation: true
+[2026-10-10 14:01:21] [config] quiet-validation: false
+[2026-10-10 14:01:21] [config] relative-paths: false
+[2026-10-10 14:01:21] [config] right-left: false
+[2026-10-10 14:01:21] [config] save-freq: 400
+[2026-10-10 14:01:21] [config] seed: 1111
+[2026-10-10 14:01:21] [config] sentencepiece-alphas:
+[2026-10-10 14:01:21] [config]   []
+[2026-10-10 14:01:21] [config] sentencepiece-max-lines: 2000000
+[2026-10-10 14:01:21] [config] sentencepiece-options: ""
+[2026-10-10 14:01:21] [config] separator-symbol: "[eos]"
+[2026-10-10 14:01:21] [config] shuffle: data
+[2026-10-10 14:01:21] [config] shuffle-in-ram: false
+[2026-10-10 14:01:21] [config] sigterm: save-and-exit
+[2026-10-10 14:01:21] [config] skip: false
+[2026-10-10 14:01:21] [config] sqlite: ""
+[2026-10-10 14:01:21] [config] sqlite-drop: false
+[2026-10-10 14:01:21] [config] sync-sgd: false
+[2026-10-10 14:01:21] [config] tempdir: /tmp
+[2026-10-10 14:01:21] [config] throw-on-divergence:
+[2026-10-10 14:01:21] [config]   []
+[2026-10-10 14:01:21] [config] tied-embeddings: true
+[2026-10-10 14:01:21] [config] tied-embeddings-all: false
+[2026-10-10 14:01:21] [config] tied-embeddings-src: false
+[2026-10-10 14:01:21] [config] train-embedder-rank:
+[2026-10-10 14:01:21] [config]   []
+[2026-10-10 14:01:21] [config] train-sets:
+[2026-10-10 14:01:21] [config]   - data/train.hic
+[2026-10-10 14:01:21] [config]   - data/train.my
+[2026-10-10 14:01:21] [config] transformer-aan-activation: swish
+[2026-10-10 14:01:21] [config] transformer-aan-depth: 2
+[2026-10-10 14:01:21] [config] transformer-aan-nogate: false
+[2026-10-10 14:01:21] [config] transformer-alibi-shift: false
+[2026-10-10 14:01:21] [config] transformer-alibi-trainable: false
+[2026-10-10 14:01:21] [config] transformer-attention-mask: default
+[2026-10-10 14:01:21] [config] transformer-decoder-autoreg: self-attention
+[2026-10-10 14:01:21] [config] transformer-decoder-dim-ffn: 0
+[2026-10-10 14:01:21] [config] transformer-decoder-ffn-depth: 0
+[2026-10-10 14:01:21] [config] transformer-depth-scaling: false
+[2026-10-10 14:01:21] [config] transformer-dim-aan: 2048
+[2026-10-10 14:01:21] [config] transformer-dim-ffn: 1024
+[2026-10-10 14:01:21] [config] transformer-disable-position-embeddings: false
+[2026-10-10 14:01:21] [config] transformer-dropout: 0.1
+[2026-10-10 14:01:21] [config] transformer-dropout-attention: 0
+[2026-10-10 14:01:21] [config] transformer-dropout-ffn: 0
+[2026-10-10 14:01:21] [config] transformer-ffn-activation: swish
+[2026-10-10 14:01:21] [config] transformer-ffn-depth: 2
+[2026-10-10 14:01:21] [config] transformer-guided-alignment-layer: last
+[2026-10-10 14:01:21] [config] transformer-heads: 4
+[2026-10-10 14:01:21] [config] transformer-no-affine: false
+[2026-10-10 14:01:21] [config] transformer-no-bias: false
+[2026-10-10 14:01:21] [config] transformer-no-projection: false
+[2026-10-10 14:01:21] [config] transformer-pool: false
+[2026-10-10 14:01:21] [config] transformer-postprocess: dan
+[2026-10-10 14:01:21] [config] transformer-postprocess-emb: d
+[2026-10-10 14:01:21] [config] transformer-postprocess-top: ""
+[2026-10-10 14:01:21] [config] transformer-preprocess: ""
+[2026-10-10 14:01:21] [config] transformer-rnn-projection: false
+[2026-10-10 14:01:21] [config] transformer-tied-layers:
+[2026-10-10 14:01:21] [config]   []
+[2026-10-10 14:01:21] [config] transformer-train-position-embeddings: false
+[2026-10-10 14:01:21] [config] tsv: false
+[2026-10-10 14:01:21] [config] tsv-fields: 0
+[2026-10-10 14:01:21] [config] type: transformer
+[2026-10-10 14:01:21] [config] ulr: false
+[2026-10-10 14:01:21] [config] ulr-dim-emb: 0
+[2026-10-10 14:01:21] [config] ulr-dropout: 0
+[2026-10-10 14:01:21] [config] ulr-keys-vectors: ""
+[2026-10-10 14:01:21] [config] ulr-query-vectors: ""
+[2026-10-10 14:01:21] [config] ulr-softmax-temperature: 1
+[2026-10-10 14:01:21] [config] ulr-trainable-transformation: false
+[2026-10-10 14:01:21] [config] unlikelihood-loss: false
+[2026-10-10 14:01:21] [config] valid-freq: 400
+[2026-10-10 14:01:21] [config] valid-log: models/tf.char.hi-my/valid.log
+[2026-10-10 14:01:21] [config] valid-max-length: 1000
+[2026-10-10 14:01:21] [config] valid-metrics:
+[2026-10-10 14:01:21] [config]   - bleu
+[2026-10-10 14:01:21] [config]   - ce-mean-words
+[2026-10-10 14:01:21] [config]   - perplexity
+[2026-10-10 14:01:21] [config] valid-mini-batch: 32
+[2026-10-10 14:01:21] [config] valid-reset-all: false
+[2026-10-10 14:01:21] [config] valid-reset-stalled: false
+[2026-10-10 14:01:21] [config] valid-script-args:
+[2026-10-10 14:01:21] [config]   []
+[2026-10-10 14:01:21] [config] valid-script-path: ""
+[2026-10-10 14:01:21] [config] valid-sets:
+[2026-10-10 14:01:21] [config]   - data/valid.hic
+[2026-10-10 14:01:21] [config]   - data/valid.my
+[2026-10-10 14:01:21] [config] valid-translation-output: models/tf.char.hi-my/valid.output
+[2026-10-10 14:01:21] [config] vocabs:
+[2026-10-10 14:01:21] [config]   - data/vocab.hic.yml
+[2026-10-10 14:01:21] [config]   - data/vocab.my.yml
+[2026-10-10 14:01:21] [config] word-penalty: 0
+[2026-10-10 14:01:21] [config] word-scores: false
+[2026-10-10 14:01:21] [config] workspace: 2048
+[2026-10-10 14:01:21] [config] Model is being created with Marian v1.12.43 c9f287d 2025-06-23 19:47:45 +0000
+[2026-10-10 14:01:21] [training] Using single-device training
+[2026-10-10 14:01:21] [comm] Compiled without MPI support. Running as a single process on 4e285bbbaf8e
+[2026-10-10 14:01:21] Synced seed 1111
+[2026-10-10 14:01:21] [data] Loading vocabulary from JSON/Yaml file data/vocab.hic.yml
+[2026-10-10 14:01:21] [data] Setting vocabulary size for input 0 to 39
+[2026-10-10 14:01:21] [data] Loading vocabulary from JSON/Yaml file data/vocab.my.yml
+[2026-10-10 14:01:21] [data] Setting vocabulary size for input 1 to 1,093
+[2026-10-10 14:01:21] [memory] Extending reserved space to 2048 MB (device cpu0)
+[2026-10-10 14:01:21] [training] Using 1 CPUs
+[2026-10-10 14:01:21] Training started
+[2026-10-10 14:01:21] [data] Shuffling data
+[2026-10-10 14:01:21] [data] Done reading 8,500 sentences
+[2026-10-10 14:01:21] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:01:21] [training] Batches are processed as 1 process(es) x 1 devices/process
+[2026-10-10 14:01:21] [logits] Applying loss function for 1 factor(s)
+[2026-10-10 14:01:21] [memory] Reserving 15 MB, device cpu0
+[2026-10-10 14:01:21] [memory] Reserving 15 MB, device cpu0
+[2026-10-10 14:01:22] [memory] Reserving 15 MB, device cpu0
+[2026-10-10 14:01:22] Parameter type float32, optimization type float32, casting types false
+[2026-10-10 14:01:22] Allocating memory for Adam-specific shards
+[2026-10-10 14:01:22] [memory] Reserving 30 MB, device cpu0
+[2026-10-10 14:02:39] Ep. 1 : Up. 100 : Sen. 6,400 : Cost 5.71943283 * 52,120 @ 384 after 52,120 : Time 78.17s : 666.76 words/s : gNorm 2.9102
+[2026-10-10 14:03:08] Seen 8,500 samples
+[2026-10-10 14:03:08] Starting data epoch 2 in logical epoch 2
+[2026-10-10 14:03:08] [data] Shuffling data
+[2026-10-10 14:03:08] [data] Done reading 8,500 sentences
+[2026-10-10 14:03:08] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:04:06] Ep. 2 : Up. 200 : Sen. 4,288 : Cost 4.17769003 * 52,103 @ 512 after 104,223 : Time 86.65s : 601.28 words/s : gNorm 2.2022
+[2026-10-10 14:05:02] Seen 8,500 samples
+[2026-10-10 14:05:02] Starting data epoch 3 in logical epoch 3
+[2026-10-10 14:05:02] [data] Shuffling data
+[2026-10-10 14:05:02] [data] Done reading 8,500 sentences
+[2026-10-10 14:05:02] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:05:32] Ep. 3 : Up. 300 : Sen. 2,176 : Cost 3.64403653 * 52,437 @ 448 after 156,660 : Time 86.17s : 608.53 words/s : gNorm 2.0418
+[2026-10-10 14:06:59] Seen 8,500 samples
+[2026-10-10 14:06:59] Starting data epoch 4 in logical epoch 4
+[2026-10-10 14:06:59] [data] Shuffling data
+[2026-10-10 14:06:59] [data] Done reading 8,500 sentences
+[2026-10-10 14:06:59] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:07:01] Ep. 4 : Up. 400 : Sen. 64 : Cost 3.33230019 * 51,453 @ 576 after 208,113 : Time 88.55s : 581.06 words/s : gNorm 1.9296
+[2026-10-10 14:07:01] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 14:07:01] Saving Adam parameters
+[2026-10-10 14:07:01] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 14:07:02] [valid] First sentence's tokens as scored:
+[2026-10-10 14:07:02] [valid] DefaultVocab keeps original segments for scoring
+[2026-10-10 14:07:02] [valid]   Hyp: သူ က ကျွန် မ ကို မုန်း တယ် ။
+[2026-10-10 14:07:02] [valid]   Ref: သူ က ကျွန် မ ကို ပြောင်း ရွေ့ ဖို့ ကူ ညီ ပေး ခဲ့ တယ် ။
+[2026-10-10 14:07:03] [valid] References contain unknown word, metric scores may be inaccurate
+[2026-10-10 14:07:31] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 14:07:31] [valid] Ep. 4 : Up. 400 : bleu : 8.01689 : new best
+[2026-10-10 14:07:36] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-ce-mean-words.npz
+[2026-10-10 14:07:36] [valid] Ep. 4 : Up. 400 : ce-mean-words : 2.45677 : new best
+[2026-10-10 14:07:40] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-perplexity.npz
+[2026-10-10 14:07:40] [valid] Ep. 4 : Up. 400 : perplexity : 11.6671 : new best
+[2026-10-10 14:09:11] Ep. 4 : Up. 500 : Sen. 6,464 : Cost 3.06308079 * 52,068 @ 576 after 260,181 : Time 130.21s : 399.87 words/s : gNorm 1.7490
+[2026-10-10 14:09:38] Seen 8,500 samples
+[2026-10-10 14:09:38] Starting data epoch 5 in logical epoch 5
+[2026-10-10 14:09:38] [data] Shuffling data
+[2026-10-10 14:09:38] [data] Done reading 8,500 sentences
+[2026-10-10 14:09:38] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:10:32] Ep. 5 : Up. 600 : Sen. 4,352 : Cost 2.87575793 * 52,142 @ 704 after 312,323 : Time 81.04s : 643.41 words/s : gNorm 1.7382
+[2026-10-10 14:11:24] Seen 8,500 samples
+[2026-10-10 14:11:24] Starting data epoch 6 in logical epoch 6
+[2026-10-10 14:11:24] [data] Shuffling data
+[2026-10-10 14:11:24] [data] Done reading 8,500 sentences
+[2026-10-10 14:11:24] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:11:51] Ep. 6 : Up. 700 : Sen. 2,240 : Cost 2.72209048 * 50,885 @ 640 after 363,208 : Time 78.75s : 646.19 words/s : gNorm 1.7315
+[2026-10-10 14:13:09] Seen 8,500 samples
+[2026-10-10 14:13:09] Starting data epoch 7 in logical epoch 7
+[2026-10-10 14:13:09] [data] Shuffling data
+[2026-10-10 14:13:09] [data] Done reading 8,500 sentences
+[2026-10-10 14:13:09] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:13:10] Ep. 7 : Up. 800 : Sen. 128 : Cost 2.60414553 * 53,018 @ 576 after 416,226 : Time 79.70s : 665.21 words/s : gNorm 1.5864
+[2026-10-10 14:13:10] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 14:13:10] Saving Adam parameters
+[2026-10-10 14:13:10] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 14:13:25] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 14:13:25] [valid] Ep. 7 : Up. 800 : bleu : 19.2656 : new best
+[2026-10-10 14:13:29] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-ce-mean-words.npz
+[2026-10-10 14:13:29] [valid] Ep. 7 : Up. 800 : ce-mean-words : 1.90383 : new best
+[2026-10-10 14:13:33] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-perplexity.npz
+[2026-10-10 14:13:33] [valid] Ep. 7 : Up. 800 : perplexity : 6.71153 : new best
+[2026-10-10 14:14:52] Ep. 7 : Up. 900 : Sen. 6,528 : Cost 2.49289823 * 52,254 @ 832 after 468,480 : Time 102.13s : 511.63 words/s : gNorm 1.5741
+[2026-10-10 14:15:17] Seen 8,500 samples
+[2026-10-10 14:15:17] Starting data epoch 8 in logical epoch 8
+[2026-10-10 14:15:17] [data] Shuffling data
+[2026-10-10 14:15:18] [data] Done reading 8,500 sentences
+[2026-10-10 14:15:18] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:16:12] Ep. 8 : Up. 1000 : Sen. 4,416 : Cost 2.38261890 * 52,649 @ 448 after 521,129 : Time 80.04s : 657.82 words/s : gNorm 1.5507
+[2026-10-10 14:17:03] Seen 8,500 samples
+[2026-10-10 14:17:03] Starting data epoch 9 in logical epoch 9
+[2026-10-10 14:17:03] [data] Shuffling data
+[2026-10-10 14:17:03] [data] Done reading 8,500 sentences
+[2026-10-10 14:17:03] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:17:31] Ep. 9 : Up. 1100 : Sen. 2,304 : Cost 2.35040259 * 50,742 @ 448 after 571,871 : Time 78.19s : 648.98 words/s : gNorm 1.6453
+[2026-10-10 14:18:48] Seen 8,500 samples
+[2026-10-10 14:18:48] Starting data epoch 10 in logical epoch 10
+[2026-10-10 14:18:48] [data] Shuffling data
+[2026-10-10 14:18:48] [data] Done reading 8,500 sentences
+[2026-10-10 14:18:48] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:18:51] Ep. 10 : Up. 1200 : Sen. 192 : Cost 2.27260184 * 52,468 @ 704 after 624,339 : Time 80.26s : 653.69 words/s : gNorm 1.6299
+[2026-10-10 14:18:51] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 14:18:51] Saving Adam parameters
+[2026-10-10 14:18:51] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 14:19:06] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 14:19:06] [valid] Ep. 10 : Up. 1200 : bleu : 23.7449 : new best
+[2026-10-10 14:19:10] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-ce-mean-words.npz
+[2026-10-10 14:19:10] [valid] Ep. 10 : Up. 1200 : ce-mean-words : 1.68354 : new best
+[2026-10-10 14:19:14] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-perplexity.npz
+[2026-10-10 14:19:14] [valid] Ep. 10 : Up. 1200 : perplexity : 5.38461 : new best
+[2026-10-10 14:20:33] Ep. 10 : Up. 1300 : Sen. 6,592 : Cost 2.19500327 * 51,905 @ 384 after 676,244 : Time 102.03s : 508.71 words/s : gNorm 1.6215
+[2026-10-10 14:20:59] Seen 8,500 samples
+[2026-10-10 14:20:59] Starting data epoch 11 in logical epoch 11
+[2026-10-10 14:20:59] [data] Shuffling data
+[2026-10-10 14:20:59] [data] Done reading 8,500 sentences
+[2026-10-10 14:20:59] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:21:55] Ep. 11 : Up. 1400 : Sen. 4,480 : Cost 2.15760994 * 52,838 @ 640 after 729,082 : Time 81.76s : 646.29 words/s : gNorm 1.5667
+[2026-10-10 14:22:44] Seen 8,500 samples
+[2026-10-10 14:22:44] Starting data epoch 12 in logical epoch 12
+[2026-10-10 14:22:44] [data] Shuffling data
+[2026-10-10 14:22:44] [data] Done reading 8,500 sentences
+[2026-10-10 14:22:44] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:23:13] Ep. 12 : Up. 1500 : Sen. 2,368 : Cost 2.10268688 * 50,715 @ 740 after 779,797 : Time 78.85s : 643.22 words/s : gNorm 1.6072
+[2026-10-10 14:24:30] Seen 8,500 samples
+[2026-10-10 14:24:30] Starting data epoch 13 in logical epoch 13
+[2026-10-10 14:24:30] [data] Shuffling data
+[2026-10-10 14:24:30] [data] Done reading 8,500 sentences
+[2026-10-10 14:24:30] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:24:34] Ep. 13 : Up. 1600 : Sen. 256 : Cost 2.06199670 * 52,328 @ 377 after 832,125 : Time 80.11s : 653.19 words/s : gNorm 1.6418
+[2026-10-10 14:24:34] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 14:24:34] Saving Adam parameters
+[2026-10-10 14:24:34] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 14:24:47] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 14:24:47] [valid] Ep. 13 : Up. 1600 : bleu : 26.2809 : new best
+[2026-10-10 14:24:51] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-ce-mean-words.npz
+[2026-10-10 14:24:51] [valid] Ep. 13 : Up. 1600 : ce-mean-words : 1.59961 : new best
+[2026-10-10 14:24:55] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-perplexity.npz
+[2026-10-10 14:24:55] [valid] Ep. 13 : Up. 1600 : perplexity : 4.95108 : new best
+[2026-10-10 14:26:14] Ep. 13 : Up. 1700 : Sen. 6,656 : Cost 2.01132727 * 52,280 @ 448 after 884,405 : Time 100.77s : 518.83 words/s : gNorm 1.6514
+[2026-10-10 14:26:38] Seen 8,500 samples
+[2026-10-10 14:26:38] Starting data epoch 14 in logical epoch 14
+[2026-10-10 14:26:38] [data] Shuffling data
+[2026-10-10 14:26:38] [data] Done reading 8,500 sentences
+[2026-10-10 14:26:38] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:27:34] Ep. 14 : Up. 1800 : Sen. 4,544 : Cost 1.96275473 * 52,203 @ 704 after 936,608 : Time 79.17s : 659.36 words/s : gNorm 1.6177
+[2026-10-10 14:28:24] Seen 8,500 samples
+[2026-10-10 14:28:24] Starting data epoch 15 in logical epoch 15
+[2026-10-10 14:28:24] [data] Shuffling data
+[2026-10-10 14:28:24] [data] Done reading 8,500 sentences
+[2026-10-10 14:28:24] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:28:54] Ep. 15 : Up. 1900 : Sen. 2,432 : Cost 1.95388484 * 51,471 @ 448 after 988,079 : Time 80.12s : 642.42 words/s : gNorm 1.6087
+[2026-10-10 14:30:10] Seen 8,500 samples
+[2026-10-10 14:30:10] Starting data epoch 16 in logical epoch 16
+[2026-10-10 14:30:10] [data] Shuffling data
+[2026-10-10 14:30:10] [data] Done reading 8,500 sentences
+[2026-10-10 14:30:10] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:30:14] Ep. 16 : Up. 2000 : Sen. 320 : Cost 1.91946924 * 51,884 @ 256 after 1,039,963 : Time 79.94s : 649.00 words/s : gNorm 1.6535
+[2026-10-10 14:30:14] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 14:30:14] Saving Adam parameters
+[2026-10-10 14:30:14] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 14:30:28] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 14:30:28] [valid] Ep. 16 : Up. 2000 : bleu : 28.2851 : new best
+[2026-10-10 14:30:32] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-ce-mean-words.npz
+[2026-10-10 14:30:32] [valid] Ep. 16 : Up. 2000 : ce-mean-words : 1.54443 : new best
+[2026-10-10 14:30:36] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-perplexity.npz
+[2026-10-10 14:30:36] [valid] Ep. 16 : Up. 2000 : perplexity : 4.68531 : new best
+[2026-10-10 14:31:55] Ep. 16 : Up. 2100 : Sen. 6,720 : Cost 1.86835206 * 52,744 @ 448 after 1,092,707 : Time 101.64s : 518.92 words/s : gNorm 1.5998
+[2026-10-10 14:32:17] Seen 8,500 samples
+[2026-10-10 14:32:17] Starting data epoch 17 in logical epoch 17
+[2026-10-10 14:32:17] [data] Shuffling data
+[2026-10-10 14:32:17] [data] Done reading 8,500 sentences
+[2026-10-10 14:32:17] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:33:14] Ep. 17 : Up. 2200 : Sen. 4,608 : Cost 1.84443820 * 51,972 @ 448 after 1,144,679 : Time 78.44s : 662.53 words/s : gNorm 1.6214
+[2026-10-10 14:34:03] Seen 8,500 samples
+[2026-10-10 14:34:03] Starting data epoch 18 in logical epoch 18
+[2026-10-10 14:34:03] [data] Shuffling data
+[2026-10-10 14:34:03] [data] Done reading 8,500 sentences
+[2026-10-10 14:34:03] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:34:33] Ep. 18 : Up. 2300 : Sen. 2,496 : Cost 1.80418909 * 51,209 @ 576 after 1,195,888 : Time 79.71s : 642.47 words/s : gNorm 1.6113
+[2026-10-10 14:35:47] Seen 8,500 samples
+[2026-10-10 14:35:47] Starting data epoch 19 in logical epoch 19
+[2026-10-10 14:35:47] [data] Shuffling data
+[2026-10-10 14:35:47] [data] Done reading 8,500 sentences
+[2026-10-10 14:35:47] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:35:52] Ep. 19 : Up. 2400 : Sen. 384 : Cost 1.80386639 * 52,470 @ 512 after 1,248,358 : Time 78.66s : 667.05 words/s : gNorm 1.6169
+[2026-10-10 14:35:52] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 14:35:52] Saving Adam parameters
+[2026-10-10 14:35:52] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 14:36:06] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 14:36:06] [valid] Ep. 19 : Up. 2400 : bleu : 30.7823 : new best
+[2026-10-10 14:36:10] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-ce-mean-words.npz
+[2026-10-10 14:36:10] [valid] Ep. 19 : Up. 2400 : ce-mean-words : 1.50499 : new best
+[2026-10-10 14:36:14] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-perplexity.npz
+[2026-10-10 14:36:14] [valid] Ep. 19 : Up. 2400 : perplexity : 4.50409 : new best
+[2026-10-10 14:37:32] Ep. 19 : Up. 2500 : Sen. 6,784 : Cost 1.75925648 * 52,400 @ 763 after 1,300,758 : Time 99.58s : 526.19 words/s : gNorm 1.5968
+[2026-10-10 14:37:53] Seen 8,500 samples
+[2026-10-10 14:37:53] Starting data epoch 20 in logical epoch 20
+[2026-10-10 14:37:53] [data] Shuffling data
+[2026-10-10 14:37:53] [data] Done reading 8,500 sentences
+[2026-10-10 14:37:53] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:38:50] Ep. 20 : Up. 2600 : Sen. 4,672 : Cost 1.73622525 * 51,559 @ 512 after 1,352,317 : Time 78.09s : 660.28 words/s : gNorm 1.6027
+[2026-10-10 14:39:37] Seen 8,500 samples
+[2026-10-10 14:39:37] Starting data epoch 21 in logical epoch 21
+[2026-10-10 14:39:37] [data] Shuffling data
+[2026-10-10 14:39:37] [data] Done reading 8,500 sentences
+[2026-10-10 14:39:37] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:40:08] Ep. 21 : Up. 2700 : Sen. 2,560 : Cost 1.71792448 * 51,803 @ 512 after 1,404,120 : Time 77.99s : 664.23 words/s : gNorm 1.6193
+[2026-10-10 14:41:38] Seen 8,500 samples
+[2026-10-10 14:41:38] Starting data epoch 22 in logical epoch 22
+[2026-10-10 14:41:38] [data] Shuffling data
+[2026-10-10 14:41:38] [data] Done reading 8,500 sentences
+[2026-10-10 14:41:38] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:41:43] Ep. 22 : Up. 2800 : Sen. 448 : Cost 1.69560325 * 52,159 @ 448 after 1,456,279 : Time 95.38s : 546.84 words/s : gNorm 1.6122
+[2026-10-10 14:41:43] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 14:41:43] Saving Adam parameters
+[2026-10-10 14:41:43] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 14:42:04] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 14:42:04] [valid] Ep. 22 : Up. 2800 : bleu : 31.8734 : new best
+[2026-10-10 14:42:11] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-ce-mean-words.npz
+[2026-10-10 14:42:11] [valid] Ep. 22 : Up. 2800 : ce-mean-words : 1.49894 : new best
+[2026-10-10 14:42:18] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-perplexity.npz
+[2026-10-10 14:42:18] [valid] Ep. 22 : Up. 2800 : perplexity : 4.47692 : new best
+[2026-10-10 14:44:13] Ep. 22 : Up. 2900 : Sen. 6,848 : Cost 1.66442430 * 52,259 @ 384 after 1,508,538 : Time 149.48s : 349.61 words/s : gNorm 1.6016
+[2026-10-10 14:44:48] Seen 8,500 samples
+[2026-10-10 14:44:48] Starting data epoch 23 in logical epoch 23
+[2026-10-10 14:44:48] [data] Shuffling data
+[2026-10-10 14:44:48] [data] Done reading 8,500 sentences
+[2026-10-10 14:44:48] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:46:30] Ep. 23 : Up. 3000 : Sen. 4,736 : Cost 1.64423501 * 52,469 @ 512 after 1,561,007 : Time 137.34s : 382.03 words/s : gNorm 1.5736
+[2026-10-10 14:47:30] Seen 8,500 samples
+[2026-10-10 14:47:30] Starting data epoch 24 in logical epoch 24
+[2026-10-10 14:47:30] [data] Shuffling data
+[2026-10-10 14:47:30] [data] Done reading 8,500 sentences
+[2026-10-10 14:47:30] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:48:05] Ep. 24 : Up. 3100 : Sen. 2,624 : Cost 1.63263297 * 51,888 @ 512 after 1,612,895 : Time 94.76s : 547.59 words/s : gNorm 1.5439
+[2026-10-10 14:49:19] Seen 8,500 samples
+[2026-10-10 14:49:19] Starting data epoch 25 in logical epoch 25
+[2026-10-10 14:49:19] [data] Shuffling data
+[2026-10-10 14:49:19] [data] Done reading 8,500 sentences
+[2026-10-10 14:49:19] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:49:25] Ep. 25 : Up. 3200 : Sen. 512 : Cost 1.62500858 * 51,945 @ 384 after 1,664,840 : Time 80.58s : 644.65 words/s : gNorm 1.5867
+[2026-10-10 14:49:25] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 14:49:25] Saving Adam parameters
+[2026-10-10 14:49:25] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 14:49:40] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 14:49:40] [valid] Ep. 25 : Up. 3200 : bleu : 34.6359 : new best
+[2026-10-10 14:49:44] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-ce-mean-words.npz
+[2026-10-10 14:49:44] [valid] Ep. 25 : Up. 3200 : ce-mean-words : 1.48626 : new best
+[2026-10-10 14:49:49] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-perplexity.npz
+[2026-10-10 14:49:49] [valid] Ep. 25 : Up. 3200 : perplexity : 4.42052 : new best
+[2026-10-10 14:51:13] Ep. 25 : Up. 3300 : Sen. 6,912 : Cost 1.59459126 * 51,631 @ 640 after 1,716,471 : Time 107.58s : 479.94 words/s : gNorm 1.6161
+[2026-10-10 14:51:35] Seen 8,500 samples
+[2026-10-10 14:51:35] Starting data epoch 26 in logical epoch 26
+[2026-10-10 14:51:35] [data] Shuffling data
+[2026-10-10 14:51:35] [data] Done reading 8,500 sentences
+[2026-10-10 14:51:35] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:52:35] Ep. 26 : Up. 3400 : Sen. 4,800 : Cost 1.58406079 * 52,120 @ 320 after 1,768,591 : Time 81.80s : 637.19 words/s : gNorm 1.5635
+[2026-10-10 14:53:20] Seen 8,500 samples
+[2026-10-10 14:53:20] Starting data epoch 27 in logical epoch 27
+[2026-10-10 14:53:20] [data] Shuffling data
+[2026-10-10 14:53:20] [data] Done reading 8,500 sentences
+[2026-10-10 14:53:20] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:53:49] Ep. 27 : Up. 3500 : Sen. 2,688 : Cost 1.56046259 * 51,310 @ 576 after 1,819,901 : Time 74.34s : 690.17 words/s : gNorm 1.5408
+[2026-10-10 14:54:55] Seen 8,500 samples
+[2026-10-10 14:54:55] Starting data epoch 28 in logical epoch 28
+[2026-10-10 14:54:55] [data] Shuffling data
+[2026-10-10 14:54:55] [data] Done reading 8,500 sentences
+[2026-10-10 14:54:55] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:55:01] Ep. 28 : Up. 3600 : Sen. 576 : Cost 1.55417776 * 52,122 @ 512 after 1,872,023 : Time 72.21s : 721.84 words/s : gNorm 1.5482
+[2026-10-10 14:55:01] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 14:55:01] Saving Adam parameters
+[2026-10-10 14:55:01] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 14:55:14] [valid] Ep. 28 : Up. 3600 : bleu : 34.2042 : stalled 1 times (last best: 34.6359)
+[2026-10-10 14:55:18] [valid] Ep. 28 : Up. 3600 : ce-mean-words : 1.49692 : stalled 1 times (last best: 1.48626)
+[2026-10-10 14:55:21] [valid] Ep. 28 : Up. 3600 : perplexity : 4.46789 : stalled 1 times (last best: 4.42052)
+[2026-10-10 14:56:32] Ep. 28 : Up. 3700 : Sen. 6,976 : Cost 1.53416336 * 52,087 @ 448 after 1,924,110 : Time 91.28s : 570.63 words/s : gNorm 1.5597
+[2026-10-10 14:56:50] Seen 8,500 samples
+[2026-10-10 14:56:50] Starting data epoch 29 in logical epoch 29
+[2026-10-10 14:56:50] [data] Shuffling data
+[2026-10-10 14:56:50] [data] Done reading 8,500 sentences
+[2026-10-10 14:56:50] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:57:43] Ep. 29 : Up. 3800 : Sen. 4,864 : Cost 1.51753116 * 52,551 @ 704 after 1,976,661 : Time 70.45s : 745.95 words/s : gNorm 1.4936
+[2026-10-10 14:58:27] Seen 8,500 samples
+[2026-10-10 14:58:27] Starting data epoch 30 in logical epoch 30
+[2026-10-10 14:58:27] [data] Shuffling data
+[2026-10-10 14:58:27] [data] Done reading 8,500 sentences
+[2026-10-10 14:58:27] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 14:59:00] Ep. 30 : Up. 3900 : Sen. 2,752 : Cost 1.51669180 * 52,544 @ 448 after 2,029,205 : Time 77.10s : 681.46 words/s : gNorm 1.4953
+[2026-10-10 15:00:05] Seen 8,500 samples
+[2026-10-10 15:00:05] Starting data epoch 31 in logical epoch 31
+[2026-10-10 15:00:05] [data] Shuffling data
+[2026-10-10 15:00:05] [data] Done reading 8,500 sentences
+[2026-10-10 15:00:05] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:00:12] Ep. 31 : Up. 4000 : Sen. 640 : Cost 1.50061786 * 51,285 @ 512 after 2,080,490 : Time 71.70s : 715.24 words/s : gNorm 1.5269
+[2026-10-10 15:00:12] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 15:00:12] Saving Adam parameters
+[2026-10-10 15:00:12] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 15:00:25] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 15:00:25] [valid] Ep. 31 : Up. 4000 : bleu : 34.996 : new best
+[2026-10-10 15:00:29] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-ce-mean-words.npz
+[2026-10-10 15:00:29] [valid] Ep. 31 : Up. 4000 : ce-mean-words : 1.48435 : new best
+[2026-10-10 15:00:33] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-perplexity.npz
+[2026-10-10 15:00:33] [valid] Ep. 31 : Up. 4000 : perplexity : 4.41209 : new best
+[2026-10-10 15:01:45] Ep. 31 : Up. 4100 : Sen. 7,040 : Cost 1.48090208 * 51,973 @ 381 after 2,132,463 : Time 93.14s : 557.99 words/s : gNorm 1.4899
+[2026-10-10 15:02:02] Seen 8,500 samples
+[2026-10-10 15:02:02] Starting data epoch 32 in logical epoch 32
+[2026-10-10 15:02:02] [data] Shuffling data
+[2026-10-10 15:02:02] [data] Done reading 8,500 sentences
+[2026-10-10 15:02:02] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:02:58] Ep. 32 : Up. 4200 : Sen. 4,928 : Cost 1.47521091 * 52,248 @ 384 after 2,184,711 : Time 73.16s : 714.15 words/s : gNorm 1.4942
+[2026-10-10 15:03:40] Seen 8,500 samples
+[2026-10-10 15:03:40] Starting data epoch 33 in logical epoch 33
+[2026-10-10 15:03:40] [data] Shuffling data
+[2026-10-10 15:03:40] [data] Done reading 8,500 sentences
+[2026-10-10 15:03:40] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:04:12] Ep. 33 : Up. 4300 : Sen. 2,816 : Cost 1.45258117 * 51,496 @ 576 after 2,236,207 : Time 73.92s : 696.68 words/s : gNorm 1.4526
+[2026-10-10 15:05:20] Seen 8,500 samples
+[2026-10-10 15:05:20] Starting data epoch 34 in logical epoch 34
+[2026-10-10 15:05:20] [data] Shuffling data
+[2026-10-10 15:05:20] [data] Done reading 8,500 sentences
+[2026-10-10 15:05:20] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:05:28] Ep. 34 : Up. 4400 : Sen. 704 : Cost 1.46276152 * 51,583 @ 448 after 2,287,790 : Time 76.45s : 674.71 words/s : gNorm 1.4932
+[2026-10-10 15:05:28] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 15:05:29] Saving Adam parameters
+[2026-10-10 15:05:29] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 15:05:42] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 15:05:42] [valid] Ep. 34 : Up. 4400 : bleu : 35.3223 : new best
+[2026-10-10 15:05:46] [valid] Ep. 34 : Up. 4400 : ce-mean-words : 1.49241 : stalled 1 times (last best: 1.48435)
+[2026-10-10 15:05:50] [valid] Ep. 34 : Up. 4400 : perplexity : 4.44781 : stalled 1 times (last best: 4.41209)
+[2026-10-10 15:07:00] Ep. 34 : Up. 4500 : Sen. 7,104 : Cost 1.44009387 * 53,131 @ 755 after 2,340,921 : Time 91.66s : 579.65 words/s : gNorm 1.4555
+[2026-10-10 15:07:15] Seen 8,500 samples
+[2026-10-10 15:07:15] Starting data epoch 35 in logical epoch 35
+[2026-10-10 15:07:15] [data] Shuffling data
+[2026-10-10 15:07:15] [data] Done reading 8,500 sentences
+[2026-10-10 15:07:15] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:08:06] Ep. 35 : Up. 4600 : Sen. 4,992 : Cost 1.41872168 * 51,366 @ 512 after 2,392,287 : Time 66.29s : 774.91 words/s : gNorm 1.4314
+[2026-10-10 15:08:47] Seen 8,500 samples
+[2026-10-10 15:08:47] Starting data epoch 36 in logical epoch 36
+[2026-10-10 15:08:47] [data] Shuffling data
+[2026-10-10 15:08:47] [data] Done reading 8,500 sentences
+[2026-10-10 15:08:47] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:09:19] Ep. 36 : Up. 4700 : Sen. 2,880 : Cost 1.42936921 * 53,260 @ 640 after 2,445,547 : Time 72.18s : 737.87 words/s : gNorm 1.4120
+[2026-10-10 15:10:36] Seen 8,500 samples
+[2026-10-10 15:10:36] Starting data epoch 37 in logical epoch 37
+[2026-10-10 15:10:36] [data] Shuffling data
+[2026-10-10 15:10:36] [data] Done reading 8,500 sentences
+[2026-10-10 15:10:36] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:10:49] Ep. 37 : Up. 4800 : Sen. 768 : Cost 1.41638207 * 51,184 @ 512 after 2,496,731 : Time 90.74s : 564.10 words/s : gNorm 1.4314
+[2026-10-10 15:10:49] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 15:10:50] Saving Adam parameters
+[2026-10-10 15:10:50] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 15:11:08] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 15:11:08] [valid] Ep. 37 : Up. 4800 : bleu : 37.4213 : new best
+[2026-10-10 15:11:13] [valid] Ep. 37 : Up. 4800 : ce-mean-words : 1.49269 : stalled 2 times (last best: 1.48435)
+[2026-10-10 15:11:18] [valid] Ep. 37 : Up. 4800 : perplexity : 4.44904 : stalled 2 times (last best: 4.41209)
+[2026-10-10 15:12:47] Ep. 37 : Up. 4900 : Sen. 7,168 : Cost 1.40197837 * 52,618 @ 640 after 2,549,349 : Time 117.42s : 448.13 words/s : gNorm 1.4237
+[2026-10-10 15:13:05] Seen 8,500 samples
+[2026-10-10 15:13:05] Starting data epoch 38 in logical epoch 38
+[2026-10-10 15:13:05] [data] Shuffling data
+[2026-10-10 15:13:05] [data] Done reading 8,500 sentences
+[2026-10-10 15:13:05] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:14:16] Ep. 38 : Up. 5000 : Sen. 5,056 : Cost 1.38724566 * 50,851 @ 384 after 2,600,200 : Time 89.11s : 570.64 words/s : gNorm 1.4156
+[2026-10-10 15:15:06] Seen 8,500 samples
+[2026-10-10 15:15:06] Starting data epoch 39 in logical epoch 39
+[2026-10-10 15:15:06] [data] Shuffling data
+[2026-10-10 15:15:06] [data] Done reading 8,500 sentences
+[2026-10-10 15:15:06] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:15:47] Ep. 39 : Up. 5100 : Sen. 2,944 : Cost 1.38305831 * 52,667 @ 704 after 2,652,867 : Time 91.11s : 578.08 words/s : gNorm 1.3482
+[2026-10-10 15:17:06] Seen 8,500 samples
+[2026-10-10 15:17:06] Starting data epoch 40 in logical epoch 40
+[2026-10-10 15:17:06] [data] Shuffling data
+[2026-10-10 15:17:06] [data] Done reading 8,500 sentences
+[2026-10-10 15:17:06] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:17:18] Ep. 40 : Up. 5200 : Sen. 832 : Cost 1.38279808 * 51,898 @ 448 after 2,704,765 : Time 90.57s : 573.04 words/s : gNorm 1.3645
+[2026-10-10 15:17:18] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 15:17:18] Saving Adam parameters
+[2026-10-10 15:17:18] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 15:17:33] [valid] Ep. 40 : Up. 5200 : bleu : 36.9315 : stalled 1 times (last best: 37.4213)
+[2026-10-10 15:17:38] [valid] Ep. 40 : Up. 5200 : ce-mean-words : 1.49438 : stalled 3 times (last best: 1.48435)
+[2026-10-10 15:17:42] [valid] Ep. 40 : Up. 5200 : perplexity : 4.45656 : stalled 3 times (last best: 4.41209)
+[2026-10-10 15:19:13] Ep. 40 : Up. 5300 : Sen. 7,232 : Cost 1.37147951 * 52,432 @ 384 after 2,757,197 : Time 115.38s : 454.44 words/s : gNorm 1.3537
+[2026-10-10 15:19:32] Seen 8,500 samples
+[2026-10-10 15:19:32] Starting data epoch 41 in logical epoch 41
+[2026-10-10 15:19:32] [data] Shuffling data
+[2026-10-10 15:19:32] [data] Done reading 8,500 sentences
+[2026-10-10 15:19:32] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:20:45] Ep. 41 : Up. 5400 : Sen. 5,120 : Cost 1.36237621 * 52,241 @ 771 after 2,809,438 : Time 92.22s : 566.48 words/s : gNorm 1.3711
+[2026-10-10 15:21:33] Seen 8,500 samples
+[2026-10-10 15:21:33] Starting data epoch 42 in logical epoch 42
+[2026-10-10 15:21:33] [data] Shuffling data
+[2026-10-10 15:21:33] [data] Done reading 8,500 sentences
+[2026-10-10 15:21:33] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:22:16] Ep. 42 : Up. 5500 : Sen. 3,008 : Cost 1.35214078 * 50,916 @ 576 after 2,860,354 : Time 90.81s : 560.71 words/s : gNorm 1.3490
+[2026-10-10 15:23:36] Seen 8,500 samples
+[2026-10-10 15:23:36] Starting data epoch 43 in logical epoch 43
+[2026-10-10 15:23:36] [data] Shuffling data
+[2026-10-10 15:23:36] [data] Done reading 8,500 sentences
+[2026-10-10 15:23:36] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:23:51] Ep. 43 : Up. 5600 : Sen. 896 : Cost 1.35988224 * 52,923 @ 576 after 2,913,277 : Time 95.26s : 555.59 words/s : gNorm 1.3314
+[2026-10-10 15:23:51] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 15:23:51] Saving Adam parameters
+[2026-10-10 15:23:51] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 15:24:08] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 15:24:08] [valid] Ep. 43 : Up. 5600 : bleu : 37.725 : new best
+[2026-10-10 15:24:12] [valid] Ep. 43 : Up. 5600 : ce-mean-words : 1.50819 : stalled 4 times (last best: 1.48435)
+[2026-10-10 15:24:17] [valid] Ep. 43 : Up. 5600 : perplexity : 4.51856 : stalled 4 times (last best: 4.41209)
+[2026-10-10 15:25:53] Ep. 43 : Up. 5700 : Sen. 7,296 : Cost 1.33848834 * 51,594 @ 512 after 2,964,871 : Time 121.49s : 424.67 words/s : gNorm 1.3343
+[2026-10-10 15:26:12] Seen 8,500 samples
+[2026-10-10 15:26:12] Starting data epoch 44 in logical epoch 44
+[2026-10-10 15:26:12] [data] Shuffling data
+[2026-10-10 15:26:12] [data] Done reading 8,500 sentences
+[2026-10-10 15:26:12] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:27:26] Ep. 44 : Up. 5800 : Sen. 5,184 : Cost 1.33489013 * 52,573 @ 512 after 3,017,444 : Time 93.67s : 561.24 words/s : gNorm 1.2854
+[2026-10-10 15:28:15] Seen 8,500 samples
+[2026-10-10 15:28:15] Starting data epoch 45 in logical epoch 45
+[2026-10-10 15:28:15] [data] Shuffling data
+[2026-10-10 15:28:15] [data] Done reading 8,500 sentences
+[2026-10-10 15:28:15] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:28:57] Ep. 45 : Up. 5900 : Sen. 3,072 : Cost 1.32699180 * 50,714 @ 512 after 3,068,158 : Time 90.53s : 560.19 words/s : gNorm 1.3069
+[2026-10-10 15:30:08] Seen 8,500 samples
+[2026-10-10 15:30:08] Starting data epoch 46 in logical epoch 46
+[2026-10-10 15:30:08] [data] Shuffling data
+[2026-10-10 15:30:08] [data] Done reading 8,500 sentences
+[2026-10-10 15:30:08] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:30:21] Ep. 46 : Up. 6000 : Sen. 960 : Cost 1.33417809 * 53,351 @ 576 after 3,121,509 : Time 83.67s : 637.63 words/s : gNorm 1.2954
+[2026-10-10 15:30:21] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 15:30:21] Saving Adam parameters
+[2026-10-10 15:30:21] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 15:30:35] [valid] Ep. 46 : Up. 6000 : bleu : 36.8671 : stalled 1 times (last best: 37.725)
+[2026-10-10 15:30:39] [valid] Ep. 46 : Up. 6000 : ce-mean-words : 1.51464 : stalled 5 times (last best: 1.48435)
+[2026-10-10 15:30:43] [valid] Ep. 46 : Up. 6000 : perplexity : 4.54777 : stalled 5 times (last best: 4.41209)
+[2026-10-10 15:32:01] Ep. 46 : Up. 6100 : Sen. 7,348 : Cost 1.32324350 * 51,475 @ 448 after 3,172,984 : Time 100.31s : 513.17 words/s : gNorm 1.3136
+[2026-10-10 15:32:15] Seen 8,500 samples
+[2026-10-10 15:32:15] Starting data epoch 47 in logical epoch 47
+[2026-10-10 15:32:15] [data] Shuffling data
+[2026-10-10 15:32:15] [data] Done reading 8,500 sentences
+[2026-10-10 15:32:15] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:33:20] Ep. 47 : Up. 6200 : Sen. 5,248 : Cost 1.30439293 * 50,920 @ 448 after 3,223,904 : Time 78.70s : 646.98 words/s : gNorm 1.2588
+[2026-10-10 15:34:02] Seen 8,500 samples
+[2026-10-10 15:34:02] Starting data epoch 48 in logical epoch 48
+[2026-10-10 15:34:02] [data] Shuffling data
+[2026-10-10 15:34:02] [data] Done reading 8,500 sentences
+[2026-10-10 15:34:02] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:34:41] Ep. 48 : Up. 6300 : Sen. 3,136 : Cost 1.31516981 * 53,182 @ 500 after 3,277,086 : Time 81.28s : 654.29 words/s : gNorm 1.2611
+[2026-10-10 15:35:48] Seen 8,500 samples
+[2026-10-10 15:35:48] Starting data epoch 49 in logical epoch 49
+[2026-10-10 15:35:48] [data] Shuffling data
+[2026-10-10 15:35:48] [data] Done reading 8,500 sentences
+[2026-10-10 15:35:48] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:36:01] Ep. 49 : Up. 6400 : Sen. 1,024 : Cost 1.30616331 * 51,678 @ 448 after 3,328,764 : Time 80.37s : 642.99 words/s : gNorm 1.2420
+[2026-10-10 15:36:01] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 15:36:01] Saving Adam parameters
+[2026-10-10 15:36:01] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 15:36:15] [valid] Ep. 49 : Up. 6400 : bleu : 36.6865 : stalled 2 times (last best: 37.725)
+[2026-10-10 15:36:19] [valid] Ep. 49 : Up. 6400 : ce-mean-words : 1.50948 : stalled 6 times (last best: 1.48435)
+[2026-10-10 15:36:23] [valid] Ep. 49 : Up. 6400 : perplexity : 4.52439 : stalled 6 times (last best: 4.41209)
+[2026-10-10 15:37:43] Ep. 49 : Up. 6500 : Sen. 7,412 : Cost 1.30713880 * 52,177 @ 512 after 3,380,941 : Time 101.88s : 512.14 words/s : gNorm 1.2851
+[2026-10-10 15:37:57] Seen 8,500 samples
+[2026-10-10 15:37:57] Starting data epoch 50 in logical epoch 50
+[2026-10-10 15:37:57] [data] Shuffling data
+[2026-10-10 15:37:57] [data] Done reading 8,500 sentences
+[2026-10-10 15:37:57] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:39:03] Ep. 50 : Up. 6600 : Sen. 5,312 : Cost 1.29564238 * 52,004 @ 448 after 3,432,945 : Time 80.06s : 649.56 words/s : gNorm 1.2509
+[2026-10-10 15:39:44] Seen 8,500 samples
+[2026-10-10 15:39:44] Starting data epoch 51 in logical epoch 51
+[2026-10-10 15:39:44] [data] Shuffling data
+[2026-10-10 15:39:44] [data] Done reading 8,500 sentences
+[2026-10-10 15:39:44] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:40:24] Ep. 51 : Up. 6700 : Sen. 3,200 : Cost 1.29561830 * 51,990 @ 512 after 3,484,935 : Time 81.03s : 641.59 words/s : gNorm 1.2246
+[2026-10-10 15:41:30] Seen 8,500 samples
+[2026-10-10 15:41:30] Starting data epoch 52 in logical epoch 52
+[2026-10-10 15:41:30] [data] Shuffling data
+[2026-10-10 15:41:30] [data] Done reading 8,500 sentences
+[2026-10-10 15:41:30] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:41:44] Ep. 52 : Up. 6800 : Sen. 1,088 : Cost 1.28532994 * 52,304 @ 704 after 3,537,239 : Time 80.23s : 651.89 words/s : gNorm 1.2025
+[2026-10-10 15:41:44] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 15:41:45] Saving Adam parameters
+[2026-10-10 15:41:45] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 15:41:59] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz.best-bleu.npz
+[2026-10-10 15:41:59] [valid] Ep. 52 : Up. 6800 : bleu : 38.606 : new best
+[2026-10-10 15:42:03] [valid] Ep. 52 : Up. 6800 : ce-mean-words : 1.51488 : stalled 7 times (last best: 1.48435)
+[2026-10-10 15:42:07] [valid] Ep. 52 : Up. 6800 : perplexity : 4.54889 : stalled 7 times (last best: 4.41209)
+[2026-10-10 15:43:27] Ep. 52 : Up. 6900 : Sen. 7,476 : Cost 1.28229666 * 51,659 @ 512 after 3,588,898 : Time 102.26s : 505.16 words/s : gNorm 1.2089
+[2026-10-10 15:43:40] Seen 8,500 samples
+[2026-10-10 15:43:40] Starting data epoch 53 in logical epoch 53
+[2026-10-10 15:43:40] [data] Shuffling data
+[2026-10-10 15:43:40] [data] Done reading 8,500 sentences
+[2026-10-10 15:43:40] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:44:47] Ep. 53 : Up. 7000 : Sen. 5,376 : Cost 1.27295077 * 51,221 @ 320 after 3,640,119 : Time 80.13s : 639.21 words/s : gNorm 1.2215
+[2026-10-10 15:45:27] Seen 8,500 samples
+[2026-10-10 15:45:27] Starting data epoch 54 in logical epoch 54
+[2026-10-10 15:45:27] [data] Shuffling data
+[2026-10-10 15:45:27] [data] Done reading 8,500 sentences
+[2026-10-10 15:45:27] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:46:06] Ep. 54 : Up. 7100 : Sen. 3,264 : Cost 1.27663326 * 51,617 @ 640 after 3,691,736 : Time 79.61s : 648.36 words/s : gNorm 1.1790
+[2026-10-10 15:47:13] Seen 8,500 samples
+[2026-10-10 15:47:13] Starting data epoch 55 in logical epoch 55
+[2026-10-10 15:47:13] [data] Shuffling data
+[2026-10-10 15:47:13] [data] Done reading 8,500 sentences
+[2026-10-10 15:47:13] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:47:29] Ep. 55 : Up. 7200 : Sen. 1,152 : Cost 1.27775955 * 54,458 @ 704 after 3,746,194 : Time 82.73s : 658.23 words/s : gNorm 1.1505
+[2026-10-10 15:47:29] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 15:47:29] Saving Adam parameters
+[2026-10-10 15:47:29] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 15:47:43] [valid] Ep. 55 : Up. 7200 : bleu : 38.0378 : stalled 1 times (last best: 38.606)
+[2026-10-10 15:47:48] [valid] Ep. 55 : Up. 7200 : ce-mean-words : 1.53029 : stalled 8 times (last best: 1.48435)
+[2026-10-10 15:47:52] [valid] Ep. 55 : Up. 7200 : perplexity : 4.61954 : stalled 8 times (last best: 4.41209)
+[2026-10-10 15:49:10] Ep. 55 : Up. 7300 : Sen. 7,540 : Cost 1.26477051 * 50,417 @ 512 after 3,796,611 : Time 101.23s : 498.05 words/s : gNorm 1.1827
+[2026-10-10 15:49:23] Seen 8,500 samples
+[2026-10-10 15:49:23] Starting data epoch 56 in logical epoch 56
+[2026-10-10 15:49:23] [data] Shuffling data
+[2026-10-10 15:49:23] [data] Done reading 8,500 sentences
+[2026-10-10 15:49:23] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:50:31] Ep. 56 : Up. 7400 : Sen. 5,440 : Cost 1.26328492 * 51,790 @ 448 after 3,848,401 : Time 80.46s : 643.69 words/s : gNorm 1.1629
+[2026-10-10 15:51:11] Seen 8,500 samples
+[2026-10-10 15:51:11] Starting data epoch 57 in logical epoch 57
+[2026-10-10 15:51:11] [data] Shuffling data
+[2026-10-10 15:51:11] [data] Done reading 8,500 sentences
+[2026-10-10 15:51:11] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:51:52] Ep. 57 : Up. 7500 : Sen. 3,328 : Cost 1.25989568 * 52,184 @ 448 after 3,900,585 : Time 81.00s : 644.28 words/s : gNorm 1.1207
+[2026-10-10 15:52:58] Seen 8,500 samples
+[2026-10-10 15:52:58] Starting data epoch 58 in logical epoch 58
+[2026-10-10 15:52:58] [data] Shuffling data
+[2026-10-10 15:52:58] [data] Done reading 8,500 sentences
+[2026-10-10 15:52:58] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:53:14] Ep. 58 : Up. 7600 : Sen. 1,216 : Cost 1.26526868 * 52,980 @ 320 after 3,953,565 : Time 81.84s : 647.33 words/s : gNorm 1.1405
+[2026-10-10 15:53:14] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 15:53:14] Saving Adam parameters
+[2026-10-10 15:53:14] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz
+[2026-10-10 15:53:28] [valid] Ep. 58 : Up. 7600 : bleu : 38.219 : stalled 2 times (last best: 38.606)
+[2026-10-10 15:53:32] [valid] Ep. 58 : Up. 7600 : ce-mean-words : 1.52922 : stalled 9 times (last best: 1.48435)
+[2026-10-10 15:53:36] [valid] Ep. 58 : Up. 7600 : perplexity : 4.6146 : stalled 9 times (last best: 4.41209)
+[2026-10-10 15:54:57] Ep. 58 : Up. 7700 : Sen. 7,604 : Cost 1.25137913 * 52,010 @ 640 after 4,005,575 : Time 103.04s : 504.77 words/s : gNorm 1.1399
+[2026-10-10 15:55:08] Seen 8,500 samples
+[2026-10-10 15:55:08] Starting data epoch 59 in logical epoch 59
+[2026-10-10 15:55:08] [data] Shuffling data
+[2026-10-10 15:55:08] [data] Done reading 8,500 sentences
+[2026-10-10 15:55:08] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:56:17] Ep. 59 : Up. 7800 : Sen. 5,504 : Cost 1.24973130 * 52,421 @ 332 after 4,057,996 : Time 80.68s : 649.77 words/s : gNorm 1.1061
+[2026-10-10 15:56:55] Seen 8,500 samples
+[2026-10-10 15:56:55] Starting data epoch 60 in logical epoch 60
+[2026-10-10 15:56:55] [data] Shuffling data
+[2026-10-10 15:56:55] [data] Done reading 8,500 sentences
+[2026-10-10 15:56:55] [data] Done shuffling 8,500 sentences to temp files
+[2026-10-10 15:57:38] Ep. 60 : Up. 7900 : Sen. 3,392 : Cost 1.24292362 * 51,175 @ 448 after 4,109,171 : Time 80.51s : 635.64 words/s : gNorm 1.0895
+[2026-10-10 15:58:39] Seen 8,500 samples
+[2026-10-10 15:58:39] Starting data epoch 61 in logical epoch 61
+[2026-10-10 15:58:39] Training finished
+[2026-10-10 15:58:51] [valid] Ep. 61 : Up. 7980 : bleu : 38.0371 : stalled 3 times (last best: 38.606)
+[2026-10-10 15:58:55] [valid] Ep. 61 : Up. 7980 : ce-mean-words : 1.52477 : stalled 10 times (last best: 1.48435)
+[2026-10-10 15:58:59] [valid] Ep. 61 : Up. 7980 : perplexity : 4.5941 : stalled 10 times (last best: 4.41209)
+[2026-10-10 15:58:59] Saving model weights and runtime parameters to models/tf.char.hi-my/model.npz
+[2026-10-10 15:58:59] Saving Adam parameters
+[2026-10-10 15:58:59] [training] Saving training checkpoint to models/tf.char.hi-my/model.npz and models/tf.char.hi-my/model.npz.optimizer.npz

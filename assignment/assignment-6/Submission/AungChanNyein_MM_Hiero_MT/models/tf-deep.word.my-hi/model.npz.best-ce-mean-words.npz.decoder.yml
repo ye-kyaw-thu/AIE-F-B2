@@ -1,0 +1,12 @@
+relative-paths: false
+models:
+  - models/tf-deep.word.my-hi/model.npz.best-ce-mean-words.npz
+vocabs:
+  - data/vocab.my.yml
+  - data/vocab.hi.yml
+beam-size: 4
+normalize: 0.6
+word-penalty: 0
+mini-batch: 32
+maxi-batch: 100
+maxi-batch-sort: src

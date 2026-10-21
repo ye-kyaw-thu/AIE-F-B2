@@ -1,0 +1,4 @@
+﻿segmentation,n,polarized_share,tfidf_acc,tfidf_false_pos_rate,tfidf_false_neg_rate,bilstm_acc,bilstm_false_pos_rate,bilstm_false_neg_rate
+word-segmented (<7 chars/token),504,0.585,0.829,0.287,0.088,0.752,0.335,0.186
+phrase-segmented (7-15),434,0.498,0.772,0.133,0.324,0.779,0.183,0.259
+unsegmented (15+),133,0.286,0.699,0.2,0.553,0.714,0.284,0.289

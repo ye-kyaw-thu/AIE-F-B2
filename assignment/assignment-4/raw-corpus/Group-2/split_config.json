@@ -1,0 +1,43 @@
+{
+  "speakers": [
+    "HanZawHtet",
+    "KhantHtay",
+    "KyawZayaNaing",
+    "NawSayRiHtoo",
+    "PunKhattgar",
+    "YeLinTun",
+    "YinMon"
+  ],
+  "counts": {
+    "train": 2999,
+    "dev": 743,
+    "test": 1420
+  },
+  "split_mode": "speaker",
+  "SPLIT": {
+    "train": [
+      "HanZawHtet",
+      "NawSayRiHtoo",
+      "KhantHtay",
+      "KyawZayaNaing"
+    ],
+    "dev": [
+      "YinMon"
+    ],
+    "test": [
+      "YeLinTun",
+      "PunKhattgar"
+    ]
+  },
+  "exclude_from_train": [],
+  "ignored": [],
+  "gender": {
+    "HanZawHtet": "male",
+    "KhantHtay": "male",
+    "KyawZayaNaing": "male",
+    "NawSayRiHtoo": "female",
+    "PunKhattgar": "female",
+    "YeLinTun": "male",
+    "YinMon": "female"
+  }
+}

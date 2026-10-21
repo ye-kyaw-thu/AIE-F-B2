@@ -1,0 +1,4 @@
+task,model,val_macro_f1,test_macro_f1,per_label_test_f1
+task1,"TF-IDF + LogReg (word+char, C=3)",0.7964,0.7899,{}
+task2,"TF-IDF + LinearSVC (char, C=0.1)",0.5640,0.5716,"{""political"": 0.693, ""racial/ethnic"": 0.583, ""religious"": 0.494, ""gender/sexual"": 0.603, ""other"": 0.486}"
+task3,"TF-IDF + LinearSVC (char, C=0.3)",0.5242,0.5092,"{""stereotype"": 0.468, ""vilification"": 0.646, ""dehumanization"": 0.479, ""extreme_language"": 0.544, ""lack_of_empathy"": 0.468, ""invalidation"": 0.450}"

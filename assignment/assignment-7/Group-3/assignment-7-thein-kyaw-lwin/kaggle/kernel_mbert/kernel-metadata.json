@@ -1,0 +1,16 @@
+{
+  "id": "theinkyawlwin/mbert-mypolar-multitask",
+  "title": "mbert-mypolar-multitask",
+  "code_file": "train_mbert.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "theinkyawlwin/mypolar-assignment7"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}
+

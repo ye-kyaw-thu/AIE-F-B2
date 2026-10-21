@@ -1,0 +1,254 @@
+authors: false
+cite: false
+build-info: ""
+workspace: 2048
+log: models/tf-small.word.hi-my/train.log
+log-level: info
+log-time-zone: ""
+quiet: false
+quiet-translation: true
+seed: 1111
+check-nan: false
+interpolate-env-vars: false
+relative-paths: false
+dump-config: ""
+sigterm: save-and-exit
+model: models/tf-small.word.hi-my/model.npz
+pretrained-model: ""
+ignore-model-config: false
+type: transformer
+dim-vocabs:
+  - 2860
+  - 1093
+dim-emb: 128
+factors-dim-emb: 0
+factors-combine: sum
+lemma-dependency: ""
+lemma-dim-emb: 0
+dim-rnn: 1024
+enc-type: bidirectional
+enc-cell: gru
+enc-cell-depth: 1
+enc-depth: 1
+dec-cell: gru
+dec-cell-base-depth: 2
+dec-cell-high-depth: 1
+dec-depth: 1
+skip: false
+layer-normalization: false
+right-left: false
+input-types:
+  []
+input-reorder:
+  []
+input-join-fields: false
+tied-embeddings: true
+tied-embeddings-src: false
+tied-embeddings-all: false
+output-omit-bias: false
+transformer-heads: 2
+transformer-no-projection: false
+transformer-rnn-projection: false
+transformer-pool: false
+transformer-dim-ffn: 256
+transformer-decoder-dim-ffn: 0
+transformer-ffn-depth: 2
+transformer-decoder-ffn-depth: 0
+transformer-ffn-activation: swish
+transformer-dim-aan: 2048
+transformer-aan-depth: 2
+transformer-aan-activation: swish
+transformer-aan-nogate: false
+transformer-decoder-autoreg: self-attention
+transformer-tied-layers:
+  []
+transformer-guided-alignment-layer: last
+transformer-preprocess: ""
+transformer-postprocess-emb: d
+transformer-postprocess: dan
+transformer-postprocess-top: ""
+transformer-train-position-embeddings: false
+transformer-depth-scaling: false
+transformer-attention-mask: default
+transformer-alibi-shift: false
+separator-symbol: "[eos]"
+transformer-disable-position-embeddings: false
+transformer-alibi-trainable: false
+transformer-no-bias: false
+transformer-no-affine: false
+bert-mask-symbol: "[MASK]"
+bert-sep-symbol: "[SEP]"
+bert-class-symbol: "[CLS]"
+bert-masking-fraction: 0.15
+bert-train-type-embeddings: true
+bert-type-vocab-size: 2
+comet-final-sigmoid: false
+comet-stop-grad: false
+comet-mix: false
+comet-mix-norm: false
+comet-pool: avg
+comet-mix-transformation: softmax
+comet-dropout: 0.1
+comet-mixup: 0
+comet-mixup-reg: false
+comet-augment-bad: 0
+comet-pooler-ffn:
+  - 2048
+  - 1024
+comet-prepend-zero: false
+comet-use-separator: false
+dropout-rnn: 0
+dropout-src: 0
+dropout-trg: 0
+transformer-dropout: 0.1
+transformer-dropout-attention: 0
+transformer-dropout-ffn: 0
+cost-type: ce-sum
+multi-loss-type: sum
+unlikelihood-loss: false
+overwrite: true
+overwrite-checkpoint: true
+no-reload: false
+no-optimizer-reload: false
+train-sets:
+  - data/train.hi
+  - data/train.my
+vocabs:
+  - data/vocab.hi.yml
+  - data/vocab.my.yml
+sentencepiece-alphas:
+  []
+sentencepiece-options: ""
+sentencepiece-max-lines: 2000000
+no-spm-encode: false
+after-epochs: 0
+after-batches: 0
+after: 60e
+disp-freq: 100
+disp-first: 0
+disp-label-counts: true
+save-freq: 400
+logical-epoch:
+  - 1e
+  - 0
+max-length: 100
+max-length-crop: false
+tsv: false
+tsv-fields: 0
+shuffle: data
+no-restore-corpus: false
+tempdir: /tmp
+sqlite: ""
+sqlite-drop: false
+devices:
+  - 0
+cpu-threads: 1
+mini-batch: 64
+mini-batch-words: 0
+mini-batch-fit: false
+mini-batch-fit-step: 10
+gradient-checkpointing: false
+maxi-batch: 100
+maxi-batch-sort: trg
+shuffle-in-ram: false
+data-threads: 8
+all-caps-every: 0
+english-title-case-every: 0
+mini-batch-words-ref: 0
+mini-batch-warmup: 0
+mini-batch-track-lr: false
+mini-batch-round-up: true
+optimizer: adam
+optimizer-params:
+  []
+optimizer-delay: 1
+sync-sgd: false
+learn-rate: 0.0005
+lr-report: false
+lr-decay: 0
+lr-decay-strategy: epoch+stalled
+lr-decay-start:
+  - 10
+  - 1
+lr-decay-freq: 50000
+lr-decay-reset-optimizer: false
+lr-decay-repeat-warmup: false
+lr-decay-inv-sqrt:
+  - 400
+lr-warmup: 400
+lr-warmup-start-rate: 0
+lr-warmup-cycle: false
+lr-warmup-at-reload: false
+label-smoothing: 0.1
+factor-weight: 1
+clip-norm: 5
+exponential-smoothing: 0
+exponential-smoothing-replace-freq: 0
+guided-alignment: none
+guided-alignment-cost: ce
+guided-alignment-weight: 0.1
+data-weighting: ""
+data-weighting-type: sentence
+embedding-vectors:
+  []
+embedding-normalization: false
+embedding-fix-src: false
+embedding-fix-trg: false
+precision:
+  - float32
+  - float32
+cost-scaling:
+  []
+throw-on-divergence:
+  []
+custom-fallbacks:
+  []
+gradient-norm-average-window: 100
+dynamic-gradient-scaling:
+  []
+check-gradient-nan: false
+normalize-gradient: false
+normalize-gradient-by-ratio: false
+train-embedder-rank:
+  []
+quantize-bits: 0
+quantize-optimization-steps: 0
+quantize-log-based: false
+quantize-biases: false
+ulr: false
+ulr-query-vectors: ""
+ulr-keys-vectors: ""
+ulr-trainable-transformation: false
+ulr-dim-emb: 0
+ulr-dropout: 0
+ulr-softmax-temperature: 1
+valid-sets:
+  - data/valid.hi
+  - data/valid.my
+valid-freq: 400
+valid-metrics:
+  - bleu
+  - ce-mean-words
+  - perplexity
+valid-reset-stalled: false
+valid-reset-all: false
+early-stopping: 8
+early-stopping-epsilon:
+  - 0
+early-stopping-on: first
+beam-size: 4
+normalize: 0.6
+max-length-factor: 3
+word-penalty: 0
+allow-unk: false
+n-best: false
+word-scores: false
+valid-mini-batch: 32
+valid-max-length: 1000
+valid-script-path: ""
+valid-script-args:
+  []
+valid-translation-output: models/tf-small.word.hi-my/valid.output
+keep-best: true
+valid-log: models/tf-small.word.hi-my/valid.log
+quiet-validation: false

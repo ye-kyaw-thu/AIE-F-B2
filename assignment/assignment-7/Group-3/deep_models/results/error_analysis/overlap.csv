@@ -1,0 +1,2 @@
+﻿both_correct,only_tfidf_wrong,only_bilstm_wrong,both_wrong,oracle_acc_if_either_correct
+723,89,123,136,0.873

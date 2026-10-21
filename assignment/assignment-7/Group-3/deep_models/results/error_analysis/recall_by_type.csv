@@ -1,0 +1,7 @@
+﻿label,n_polarized,tfidf_recall,bilstm_recall
+political,287,0.808,0.812
+racial/ethnic,86,0.767,0.814
+religious,37,0.892,0.919
+gender/sexual,64,0.797,0.797
+other,162,0.772,0.735
+(no label given),23,0.478,0.522

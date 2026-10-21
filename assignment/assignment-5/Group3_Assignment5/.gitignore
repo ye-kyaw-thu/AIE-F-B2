@@ -1,0 +1,28 @@
+.DS_Store
+# JavaScript / Next.js generated files
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Flutter / Android generated files
+.dart_tool/
+build/
+android/.gradle/
+android/local.properties
+*.apk
+*.aab
+
+# Local environment and tooling files
+.env
+.env.*
+!.env.local.example
+.idea/
+*.iml
+
+# Local data and large generated archives
+*.csv
+*.rds
+*.pth
+large_dataset_folder/
+*.zip

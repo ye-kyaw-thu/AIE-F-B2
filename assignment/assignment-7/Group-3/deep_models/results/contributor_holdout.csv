@@ -1,0 +1,5 @@
+task,model,seed,best_epoch,val_macro_f1,test_macro_f1,per_label_test_f1
+task1,tfidf_char_logreg(C=30),42,,0.6202,0.6023,{}
+task1,bilstm,42,4,0.6256,0.6624,{}
+task1,transformer,42,11,0.6107,0.629,{}
+task1,xlmr,42,1,0.6585,0.658,{}
