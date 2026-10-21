@@ -1,0 +1,13 @@
+
+import {T} from "@/components/i18n/language-provider";
+import Link from "next/link";
+import { requireRole } from "@/lib/auth/session";
+import { createClient } from "@/lib/supabase/server";
+import { StatusBadge } from "@/components/ui/status-badge";
+import { formatDate } from "@/lib/shipments/queries";
+
+export default async function DriverDashboard({searchParams}:{searchParams:Promise<{page?:string}>}) {
+  const profile=await requireRole("driver");const params=await searchParams;const value=Number(params.page);const page=Number.isSafeInteger(value)&&value>0&&value<=10000 ? value : 1;
+  const supabase=await createClient();const {data,error,count}=await supabase.from("shipments").select("id,shipment_number,origin,destination,status,cargo_type,quantity,quantity_unit,pickup_date,gate_statuses(gate_name,status)",{count:"exact"}).eq("driver_id",profile.id).order("updated_at",{ascending:false}).order("id").range((page-1)*20,page*20-1);
+  return <><div className="page-heading"><div><p className="eyebrow"><T>YOUR NEXT JOURNEY</T></p><h1><T>My assignments</T><span>.</span></h1><p className="muted">{count ?? 0}<T> assigned shipments. Open a shipment to update progress.</T></p></div></div>{error ? <p className="dashboard-message" role="alert"><T>Assignments are unavailable. Refresh to retry.</T></p> : !data.length ? <section className="panel dashboard-message"><h2><T>No assignments here yet</T></h2><p><T>Your assigned shipments will appear here.</T></p>{page>1&&<Link href="/driver/dashboard"><T>Return to first page</T></Link>}</section> : <div className="assignment-grid">{data.map(shipment=><section className="panel assignment-card" key={shipment.id}><div className="panel-heading"><Link href={`/driver/shipments/${shipment.id}`} className="shipment-number text-link">{shipment.shipment_number}</Link><StatusBadge status={shipment.status} /></div><div className="assignment-body"><h2>{shipment.origin} → {shipment.destination}</h2><p>{shipment.cargo_type} · {shipment.quantity} {shipment.quantity_unit}</p><p><T>Pickup </T>{formatDate(shipment.pickup_date)}</p><p>{shipment.gate_statuses?.gate_name}<T> Gate </T>{shipment.gate_statuses&&<StatusBadge status={shipment.gate_statuses.status} />}</p><Link className="button button-dark" href={`/driver/shipments/${shipment.id}`}><T>Open assignment →</T></Link></div></section>)}</div>}{!error&&<nav className="pagination driver-pagination" aria-label="Assignment pages">{page>1&&<Link href={`/driver/dashboard?page=${page-1}`}><T>← Previous</T></Link>}{page*20<(count ?? 0)&&<Link href={`/driver/dashboard?page=${page+1}`}><T>Next →</T></Link>}</nav>}</>;
+}

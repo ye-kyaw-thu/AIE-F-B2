@@ -1,0 +1,93 @@
+/* Shared with the public site's paper, ink and typefaces. */
+.driver-management-grid { display:grid; grid-template-columns:minmax(260px,.8fr) minmax(300px,1.2fr); gap:24px; margin-bottom:24px; align-items:start; }
+.driver-management-grid .form-field { margin-bottom:16px; }
+.driver-management-grid .form-help { text-align:left; margin:0 0 20px; }
+.driver-invitation-list { list-style:none; padding:0 24px 24px; margin:0; }
+.driver-invitation-list li { border-top:1px solid var(--line); padding:20px 0; }
+.driver-invitation-list p,.driver-invitation-list small { font-size:12px; color:var(--muted); overflow-wrap:anywhere; }
+.driver-row-action { white-space:normal; max-width:300px; margin-top:10px; }
+.driver-row-action p { font-size:12px; margin-top:8px; }
+.driver-disable-confirm { display:flex; align-items:center; gap:8px; font-size:11px; margin-bottom:10px; }
+.driver-disable-confirm input { width:16px; height:16px; flex-shrink:0; }
+@media(max-width:900px) { .driver-management-grid { grid-template-columns:1fr; } }
+.app-shell, .driver-workspace {
+  --background: #f8f5ee;
+  --foreground: #242c28;
+  --muted: #677066;
+  --line: #deded2;
+  --teal: #a7492e;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+.app-shell .sidebar { background: #eeece3; padding-top: 30px; }
+.app-shell .public-wordmark, .driver-workspace .public-wordmark { font-size: 17px; gap: 10px; letter-spacing: -.4px; }
+.app-shell .public-wordmark svg, .driver-workspace .public-wordmark svg { color: #a7492e; flex-shrink: 0; }
+.app-shell .public-wordmark small, .driver-workspace .public-wordmark small { color: #677066; font-size: 7px; letter-spacing: 1.3px; }
+.app-shell .workspace-label { margin: 42px 12px 16px; color: #73796d; font-weight: 500; font-size: 9px; }
+.app-shell .main-nav { gap: 4px; }
+.app-shell .main-nav a { border-radius: 2px; color: #596355; font-size: 13px; min-height: 46px; border-left: 2px solid transparent; }
+.app-shell .main-nav a:hover { background: #e4e2d7; color: #242c28; }
+.app-shell .main-nav a[aria-current="page"] { background: #dfded1; color: #242c28; border-left-color: #a7492e; font-weight: 600; }
+.app-shell .nav-count { background: #f8f5ee; color: #a7492e; border-radius: 2px; }
+.app-shell .foundation-card { background: transparent; border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: 22px 12px; }
+.app-shell .tiny-label { color: #a7492e; font-weight: 500; }
+.app-shell .foundation-card p { font-family: var(--font-editorial); font-size: 25px; font-weight: 400; line-height: 1.2; }
+.app-shell .topbar { background: #f8f5ee; height: 76px; }
+.app-shell .breadcrumb, .app-shell .trader-name { color: #596355; font-size: 12px; }
+.app-shell .main-content { padding-top: 40px; }
+:is(.app-shell,.driver-workspace) h1 { font-family: var(--font-editorial); font-size: clamp(32px,3vw,43px); font-weight: 400; letter-spacing: -1px; }
+:is(.app-shell,.driver-workspace) h1 > span { color: #a7492e; }
+:is(.app-shell,.driver-workspace) .eyebrow { color: #a7492e; font-weight: 500; letter-spacing: 1.3px; }
+:is(.app-shell,.driver-workspace) .page-heading .muted { font-size: 13px; line-height: 1.8; }
+:is(.app-shell,.driver-workspace) .panel, :is(.app-shell,.driver-workspace) .stat-card { border-radius: 3px; background: #fffdf8; box-shadow: none; }
+:is(.app-shell,.driver-workspace) .panel-heading { padding-block: 23px; }
+:is(.app-shell,.driver-workspace) .panel-heading h2 { font-family: var(--font-editorial); font-size: 24px; font-weight: 400; letter-spacing: -.3px; }
+:is(.app-shell,.driver-workspace) .panel-subtitle { font-size: 12px; color: var(--muted); }
+:is(.app-shell,.driver-workspace) .stat-top { font-size: 12px; color: var(--muted); }
+:is(.app-shell,.driver-workspace) .stat-value, .app-shell .admin-stat strong { font-family: var(--font-editorial); font-size: 38px; font-weight: 400; font-variant-numeric: lining-nums tabular-nums; }
+:is(.app-shell,.driver-workspace) .stat-detail { font-size: 11px; }
+:is(.app-shell,.driver-workspace) .button { border-radius: 2px; font-size: 12px; font-weight: 500; min-height: 44px; }
+:is(.app-shell,.driver-workspace) .button-dark { background: #293b32; }
+:is(.app-shell,.driver-workspace) .button-dark:hover { background: #425547; }
+:is(.app-shell,.driver-workspace) .signout-button { background: #eae8dc; color: #394738; }
+:is(.app-shell,.driver-workspace) .text-link, .app-shell .pagination { color: #a7492e; }
+:is(.app-shell,.driver-workspace) :is(a,button,input,select,textarea,summary):focus-visible { outline: 2px solid #a7492e; outline-offset: 3px; }
+:is(.app-shell,.driver-workspace) :is(.form-field input,.form-field select,.form-field textarea,.shipment-filter select) { border-radius: 2px; border-color: #bdc2b2; background: #fffdf8; }
+:is(.app-shell,.driver-workspace) .shipment-form legend { font-family: var(--font-editorial); font-size: 24px; font-weight: 400; }
+.app-shell th { background: #f0efe6; color: #626b5d; font-size: 10px; letter-spacing: .5px; font-weight: 500; padding-block: 14px; }
+.app-shell td { color: #424e40; font-size: 12px; border-bottom-color: #eae9df; }
+.app-shell tbody tr:hover { background: #f6f4eb; }
+.app-shell .shipment-number { color: #293b32; font-size: 12px; font-weight: 600; }
+.app-shell .table-subtext { color: #72796c; }
+.app-shell .table-footer { font-size: 11px; color: var(--muted); }
+:is(.app-shell,.driver-workspace) .status-badge { border-radius: 2px; font-size: 11px; padding: 5px 8px; }
+:is(.app-shell,.driver-workspace) .status-requested { color: #626b5d; background: #eeede4; }
+:is(.app-shell,.driver-workspace) :is(.status-in_transit,.status-picked_up,.status-approved) { color: #36574f; background: #e6eee8; }
+:is(.app-shell,.driver-workspace) :is(.status-open,.status-delivered) { color: #376244; background: #e8eee1; }
+:is(.app-shell,.driver-workspace) :is(.status-customs,.status-arrived_at_checkpoint,.status-delayed) { color: #876028; background: #f5ead1; }
+:is(.app-shell,.driver-workspace) .status-closed { color: #963e2d; background: #f5e4dc; }
+:is(.app-shell,.driver-workspace) :is(.success-notice,.location-status) { border-radius: 2px; background: #edf0e5; color: #40563c; }
+:is(.app-shell,.driver-workspace) .alert-kind { color: #a7492e; }
+:is(.app-shell,.driver-workspace) .alert-unread .alert-state { background: #a7492e; box-shadow: 0 0 0 4px #f4e7dc; }
+:is(.app-shell,.driver-workspace) .alert-card.alert-unread { border-color: #caab93; }
+:is(.app-shell,.driver-workspace) .footer { color: #72796c; font-size: 11px; padding-top: 18px; }
+.driver-workspace { min-height: 100vh; max-width: 1100px; }
+.driver-workspace .driver-header { background: #eeece3; }
+.driver-workspace .driver-greeting { border-bottom: 1px solid var(--line); color: #596355; }
+.driver-workspace .assignment-body h2 { font-family: var(--font-editorial); font-size: 26px; font-weight: 400; }
+.driver-workspace .assignment-body p { color: #596355; line-height: 1.7; }
+.live-banner { font-family: var(--font-sans); background: #eeeee1; color: #4c5d43; }
+@media(max-width:700px) {
+  .app-shell .sidebar { padding-top: 20px; }
+  .app-shell .main-nav { flex-wrap: wrap; justify-content: flex-start; gap: 4px; }
+  .app-shell .main-nav a { flex: 1 1 auto; font-size: 11px; padding: 8px; min-height: 44px; }
+  .app-shell .topbar { height: 58px; }
+  .app-shell .main-content { padding-top: 26px; }
+  :is(.app-shell,.driver-workspace) .panel-heading h2 { font-size: 22px; }
+  :is(.app-shell,.driver-workspace) h1, .driver-workspace .page-heading h1 { font-size: 32px; }
+  :is(.app-shell,.driver-workspace) :is(.form-field input,.form-field select,.form-field textarea) { font-size: 16px; }
+  :is(.app-shell,.driver-workspace) .public-wordmark { font-size: 16px; }
+  .driver-workspace .public-wordmark svg { width: 28px; }
+  .driver-workspace .driver-header { gap: 10px; }
+}

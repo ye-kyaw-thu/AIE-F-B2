@@ -1,0 +1,40 @@
+.language-switch { display: inline-flex; align-items: center; flex-shrink: 0; border: 1px solid #bfc2b2; padding: 3px; gap: 2px; border-radius: 2px; }
+.language-switch button { background: transparent; border: 0; border-radius: 1px; color: #626b5d; font-size: 11px; padding: 6px 8px; min-height: 32px; line-height: 1.6; }
+.language-switch button[lang="my"] { font-family: 'Noto Sans Myanmar',sans-serif; }
+.language-switch button[aria-pressed="true"] { background: #293b32; color: #fffdf8; }
+.language-switch button:focus-visible { outline: 2px solid #a7492e; outline-offset: 2px; }
+.language-switch button:hover { background: #e5e3d6; color: #242c28; }
+.language-switch button[aria-pressed="true"]:hover { background: #425547; color: #fffdf8; }
+html[lang="my"] { --font-sans: 'Noto Sans Myanmar','IBM Plex Sans Variable',sans-serif; --font-editorial: 'Noto Sans Myanmar',sans-serif; }
+html[lang="my"] body { line-height: 1.9; }
+html[lang="my"] :is(h1,h2,h3,em,.eyebrow,.editorial-label,.workspace-label,.tiny-label,.route-index) { letter-spacing: 0; font-style: normal; }
+html[lang="my"] :is(.hero-copy h1,.closing-section h2) { font-size: clamp(34px,4.3vw,62px); line-height: 1.7; letter-spacing: 0; }
+html[lang="my"] :is(.section-intro h2,.corridor-heading h2) { font-size: clamp(29px,3vw,42px); line-height: 1.7; letter-spacing: 0; }
+html[lang="my"] .auth-story h2 { font-size: 34px; line-height: 1.8; }
+html[lang="my"] .auth-form-side h1 { font-size: 30px; line-height: 1.7; letter-spacing: 0; }
+html[lang="my"] :is(.workflow-list h3,.people-list h3) { font-size: 22px; line-height: 1.8; }
+html[lang="my"] :is(.hero-description,.section-intro>p,.people-list p,.auth-form-side>p) { line-height: 2.1; }
+html[lang="my"] :is(.app-shell,.driver-workspace) h1 { font-size: clamp(26px,2.4vw,34px); line-height: 1.8; letter-spacing: 0; }
+html[lang="my"] :is(.app-shell,.driver-workspace) .panel-heading h2 { font-size: 20px; line-height: 1.8; }
+html[lang="my"] :is(.app-shell,.driver-workspace) .shipment-form legend { font-size: 20px; }
+html[lang="my"] .app-shell .main-nav a { font-size: 12px; line-height: 1.8; gap: 10px; }
+html[lang="my"] .main-nav svg { flex-shrink: 0; }
+html[lang="my"] :is(.ink-button,.button) { white-space: normal; text-align: center; line-height: 1.9; }
+html[lang="my"] .stat-top { min-height: 44px; }
+html[lang="my"] .status-badge { line-height: 1.9; }
+html[lang="my"] .milestone h3 { font-size: 11px; line-height: 1.9; }
+html[lang="my"] .footer { flex-wrap: wrap; }
+.auth-site .site-header { flex-wrap: wrap; }
+@media(max-width:900px) { .site-header { flex-wrap: wrap; }.site-header nav { flex-wrap: wrap; justify-content: flex-end; gap: 16px; }.topbar-right { gap: 12px; } }
+@media(max-width:700px) {
+  .public-site .site-header nav { width: 100%; justify-content: space-between; gap: 9px; }
+  .language-switch button { padding: 5px 7px; }
+  .driver-header { flex-wrap: wrap; }
+  .driver-header .public-wordmark { margin-right: auto; }
+  .app-shell .breadcrumb { display: none; }
+  .app-shell .topbar { justify-content: flex-end; }
+  html[lang="my"] .app-shell .main-nav a { flex: 1 1 40%; font-size: 12px; }
+  html[lang="my"] .auth-story h2 { font-size: 28px; }
+  html[lang="my"] .stats-grid,html[lang="my"] .admin-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  html[lang="my"] .stat-card { padding: 16px 12px; }
+}
